@@ -25,26 +25,7 @@
 
     <body>
            <!-- Top bar Start -->
-           <div class="top-bar">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-6">
-                    <?php 
-            $sessionusuario=session('sessionusuario');
-        ?>
-       <p>  <?php echo $sessionusuario?> </p>
-     
-     </div>
-     <div class="col-sm-6">
-                        <i class="fa fa-phone-alt"></i>
-                        +55 722 878 3341
-                    </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-
+           
         <div class="nav">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
@@ -60,7 +41,7 @@
                             <a href="{{route('carrito')}}" class="nav-item nav-link">Carrito</a>
                             <a href="{{route('vista_compras')}}" class="nav-item nav-link">Compras realizadas</a>
                             <a href="{{route('contacto')}}" class="nav-item nav-link">Conocenos</a>
-                            <a href="{{route('cuenta')}}" class="nav-item nav-link">Mi cuenta</a>
+                            <a href="{{route('login')}}" class="nav-item nav-link">Iniciar sesion</a>
                            
                                
                            
@@ -75,7 +56,7 @@
                 </nav>
             </div>
         </div>
-        <!-- Nav Bar End -->      
+        <!-- Nav Bar End -->    
         
         <!-- Bottom Bar Start -->
         <div class="bottom-bar">

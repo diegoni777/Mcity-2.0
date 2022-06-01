@@ -10,6 +10,7 @@ use App\Http\Controllers\AccesoriosController;
 use App\Http\Controllers\TablapController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ComprasController;
+use App\Http\Controllers\InicioController;
 use App\Http\Controllers\MaquillajeController;
 use App\Http\Controllers\AdminpController;
 use App\Http\Controllers\ContactoController;
@@ -30,7 +31,7 @@ use Illuminate\Support\Facades\Route;
 
 //-----------login-----------//
     //ruta que manda a vista login//
-    Route::get('/',[LoginController::class,'login'])->name('/');
+    Route::get('auth/login',[LoginController::class,'login'])->name('login');
 
     //ruta validación de login//
     Route::post('valida',[LoginController::class,'valida'])->name('valida');
@@ -70,6 +71,7 @@ Route::get('accesorios',[AccesoriosController::class,'ver_accesorios'])->name('a
 //----------------------------Cuenta-------------------//
 Route::get('cuenta',[CuentaController::class,'ver_cuenta'])->name('cuenta');
 Route::get('contacto',[ContactoController::class,'ver_contacto'])->name('contacto');
+Route::get('/',[InicioController::class,'ver_inicio'])->name('/');
 
 
 //-------------------------consultas----------------------------//

@@ -63,7 +63,7 @@ class LoginController extends Controller
                 return redirect('admin');
             }
         }else{
-            return redirect('/')->with('status', 'No se encontro al usuario');
+            return redirect('auth/login')->with('status', 'No se encontro al usuario');
 
         }
     }

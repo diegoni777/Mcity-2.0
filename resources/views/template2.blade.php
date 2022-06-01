@@ -77,16 +77,12 @@
                             <a href="{{route('carrito')}}" class="nav-item nav-link">Carrito</a>
                             <a href="{{route('vista_compras')}}" class="nav-item nav-link">Compras realizadas</a>
                             <a href="{{route('contacto')}}" class="nav-item nav-link">Conocenos</a>
+                            <a href="{{route('cuenta')}}" class="nav-item nav-link">Mi cuenta</a>
                             
                         </div>
                         <div class="navbar-nav ml-auto">
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Cuenta</a>
-                                <div class="dropdown-menu">
-                                    <a href="{{route('/')}}" class="dropdown-item">Inicia sesion</a>
-                                    <a href="{{route('alta_usuarios')}}" class="dropdown-item">Registro</a>
-                                    <a href="{{route('cuenta')}}" class="dropdown-item">Mi cuenta</a>
-                                </div>
+                               
                             </div>
                         </div>
                     </div>
@@ -102,7 +98,7 @@
                     <div class="col-md-3">
                         <div class="logo">
                         <a href="{{route('principal')}}" class="nav-item nav-link active">
-                                <img src="img/logo5.png" alt="Logo">
+                                <img src="img/logo6.png" alt="Logo">
                             </a>
                         </div>
                     </div>
