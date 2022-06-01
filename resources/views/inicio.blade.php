@@ -35,7 +35,7 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto">
-                            <a href="{{route('principal')}}" class="nav-item nav-link active">Home</a>
+                            <a href="{{route('/')}}" class="nav-item nav-link active">Home</a>
                             <a href="{{route('tablap')}}" class="nav-item nav-link">Productos</a>
                             <a href="" class="nav-item nav-link">Empresas</a>
                             <a href="{{route('carrito')}}" class="nav-item nav-link">Carrito</a>
@@ -64,7 +64,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-3">
                         <div class="logo">
-                        <a href="{{route('principal')}}" class="nav-item nav-link active">
+                        <a href="{{route('/')}}" class="nav-item nav-link active">
                                 <img src="img/logo6.png" alt="Logo">
                             </a>
                         </div>

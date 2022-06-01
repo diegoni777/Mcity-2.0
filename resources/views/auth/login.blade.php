@@ -34,7 +34,12 @@
         <button>Iniciar sesión</button>
         <div class="social">
             <div class="go"><a href="{{ route('alta_usuarios') }}">Registrarme</a></div>
+            
+            
+            <div class="go"><a href="{{ route('/') }}">Salir</a></div>
+            
         </div>
+
 
     </form>
 
