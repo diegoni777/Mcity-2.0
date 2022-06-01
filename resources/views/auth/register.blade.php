@@ -1,31 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<link rel="stylesheet" href="https://bootswatch.com/5/cyborg/bootstrap.min.css">
+    <head>
+        <link rel="stylesheet" href="https://bootswatch.com/5/cyborg/bootstrap.min.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Registro de Usuarios</title>
+        <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
+    </head>
 
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Registro de Usuarios</title>
-    <div class="container mt-2">
-        <div class="card">
-            <div class="card-body bg-primary mt-2 ">
-                
-            </div>
-        </div>
-    </div>
-
-    <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
-   
-    
-</head>
-    
-</head>
-<center>
 <body>
     <h1>Registro Usuarios</h1>
         <div class="container">
