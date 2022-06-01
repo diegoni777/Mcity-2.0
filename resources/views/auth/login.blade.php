@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <link rel="stylesheet" href="https://bootswatch.com/5/cyborg/bootstrap.min.css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Iniciar sesión</title>
-        <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
-    </head>
+  <!-- Design by foolishdeveloper.com -->
+    <title>Login Mcity</title>
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset ('login/css/login.css') }}">
+    <!--Stylesheet-->
+</head>
 <body>
     <div class="background">
         <div class="shape"></div>
