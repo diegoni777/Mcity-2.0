@@ -12,7 +12,7 @@ class RopaController extends Controller
     public function ver_ropa(){
     
 
-        $consulta= Productos::SELECT ('Productos.producto','Productos.precio','Productos.fotop','Productos.tipo')
+        $consulta= Productos::SELECT ('productos.producto','productos.precio','productos.fotop','productos.tipo')
         ->WHERE('tipo','ropa')->get()
         ;
 

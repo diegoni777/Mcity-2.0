@@ -12,7 +12,7 @@ class TecnologiaController extends Controller
     public function ver_tecnologia(){
     
 
-        $consulta= Productos::SELECT ('Productos.producto','Productos.precio','Productos.fotop','Productos.tipo')
+        $consulta= Productos::SELECT ('productos.producto','productos.precio','productos.fotop','productos.tipo')
         ->WHERE('tipo','tecnologia')->get()
         ;
 
