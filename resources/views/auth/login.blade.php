@@ -1,47 +1,58 @@
 <!DOCTYPE html>
-<html lang="es-mx">
+<html lang="en">
 <head>
-  <!-- Design by foolishdeveloper.com -->
-    <title>Inicio de sesión Mcity</title>
-    
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ URL::asset ('login/css/login.css') }}">
-    <!--Stylesheet-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" type="text/css" href="{{ URL::asset ('plantilla/css/style2.css') }}">
+
+
+    <title>Login</title>
 </head>
 <body>
-    <div class="background">
-        <div class="shape"></div>
-        <div class="shape"></div>
-    </div>
-    <form action="{{ route ('valida') }}" method="POST">
+<form action="{{ route ('valida') }}" method="POST">
     {{ csrf_field() }}
 
-        <h3>Mcity</h3>
+        
         @if (session('status'))
 		    <div class="alert alert-danger">
 		        {{ session('status') }}
 		    </div>
 	    @endif
 
-        <label for="username">Correo</label>
-        <input type="text" placeholder="Ingresa tu correo Electrónico" name="correo" id="correo" >
+      <div class="login-container">
+          <div class="login-info-container">
+            <h1 class="title">Micty Store</h1>
+
+            <div class="social-login">
+                <div class="social-login-element">
+                    <img src="{{ URL::asset ('img/google.svg') }}" alt="google-image">
+                    <span>Google</span>
+                </div>
+
+
+                <div class="social-login-element">
+                    <img src="{{ URL::asset ('img/facebook.svg') }}" alt="facebook-image">
+                    <span>Facebook</span>
+                </div>
+            </div>
+
+            <p>o</p>
+            <form class="inputs-container">
+            <label for="username">Correo</label>
+        <input class="input" type="text" placeholder="Ingresa tu correo Electrónico" name="correo" id="correo" >
 
         <label for="password">Contraseña</label>
-        <input type="password" placeholder="Contraseña" name="password" id="password">
+        <input class="input" type="password" placeholder="Contraseña" name="password" id="password">
 
-        <button>Iniciar sesión</button>
-        <div class="social">
-            <div class="go"><a href="{{ route('alta_usuarios') }}">Registrarme</a></div>
-            
-            
-            <div class="go"><a href="{{ route('/') }}">Salir</a></div>
-            
-        </div>
+                <p>Olvidaste tu contraseña? <span class="span">Click aqui</span></p>
+                <button class="btn">Iniciar Sesion</button>
 
-
-    </form>
+                <p>No tienes una cuenta? <a class="span" href="{{ route('alta_usuarios') }}">Registrate</a></p>
+            </form>
+          </div>
+            <img class="image-container" src="{{ URL::asset ('img/login.svg') }}" alt="">
+      </div>
 
 </body>
 </html>
