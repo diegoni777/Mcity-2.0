@@ -3,6 +3,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductosController;
 use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\TecnologiaController;
+use App\Http\Controllers\EmpresaController;
 use App\Http\Controllers\RopaController;
 use App\Http\Controllers\CuentaController;
 use App\Http\Controllers\CarritoController;
@@ -72,6 +73,14 @@ Route::get('accesorios',[AccesoriosController::class,'ver_accesorios'])->name('a
 Route::get('cuenta',[CuentaController::class,'ver_cuenta'])->name('cuenta');
 Route::get('contacto',[ContactoController::class,'ver_contacto'])->name('contacto');
 Route::get('/',[InicioController::class,'ver_inicio'])->name('/');
+Route::get('cerrarsession',[LoginController::class,'cerrarsession'])->name('cerrarsession');
+
+
+//-------------------------empresa------------------------------//
+Route::get('empresa',[EmpresaController::class,'registro_empresa'])->name('empresa');
+Route::post('guarda_empresa',[EmpresaController::class,'guarda_empresa'])->name('guarda_empresa');
+Route::get('tablae',[EmpresaController::class,'tablae'])->name('tablae');
+
 
 
 //-------------------------consultas----------------------------//

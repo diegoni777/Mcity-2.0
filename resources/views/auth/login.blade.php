@@ -46,10 +46,14 @@
         <input class="input" type="password" placeholder="Contraseña" name="password" id="password">
 
                 <p>Olvidaste tu contraseña? <span class="span">Click aqui</span></p>
-                <button class="btn">Iniciar Sesion</button>
+                <button class="btn">Iniciar </button>
 
                 <p>No tienes una cuenta? <a class="span" href="{{ route('alta_usuarios') }}">Registrate</a></p>
+                <p><a class="span" href="{{ route('/') }}">Salir</a></p>
+                
+                
             </form>
+            
           </div>
             <img class="image-container" src="{{ URL::asset ('img/login.svg') }}" alt="">
       </div>

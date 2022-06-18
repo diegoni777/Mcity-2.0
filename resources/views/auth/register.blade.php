@@ -102,13 +102,14 @@
 							Registrate
 						</button>
 					</div>
+                    <div><a class="span" href="{{ route('/') }}">Salir</a></div>
 					
 					
 
 					
 				</form>
 
-				<div class="login100-more" style="background-image: url('img/mcity2.jpg');">
+				<div class="login100-more" style="background-image: url('img/slider-3.jpg');">
 				</div>
 			</div>
 		</div>

@@ -24,7 +24,7 @@
                         <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
                             <a class="nav-link active" id="dashboard-nav" data-toggle="pill" href="#dashboard-tab" role="tab"><i class="fa fa-tachometer-alt"></i>Perfil</a>
                             <a class="nav-link" id="account-nav" data-toggle="pill" href="{{route('admin')}}" role="tab"><i class="fa fa-user"></i>Detalles de cuenta</a>
-                            <a class="nav-link" href="{{route('login')}}"><i class="fa fa-sign-out-alt"></i>Cerrar Sesion</a>
+                            <a class="nav-link" href="{{route('cerrarsession')}}"><i class="fa fa-sign-out-alt"></i>Cerrar Sesion</a>
                         </div>
                     </div>
                     <div class="col-md-9">
@@ -32,8 +32,8 @@
                             <div class="tab-pane fade show active" id="dashboard-tab" role="tabpanel" aria-labelledby="dashboard-nav">
                                 <h4>Perfil</h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In condimentum quam ac mi viverra dictum. In efficitur ipsum diam, at dignissim lorem tempor in. Vivamus tempor hendrerit finibus. Nulla tristique viverra nisl, sit amet bibendum ante suscipit non. Praesent in faucibus tellus, sed gravida lacus. Vivamus eu diam eros. Aliquam et sapien eget arcu rhoncus scelerisque.
-                                </p> 
+                                  Esta es tu cuenta en donde podras hacer cambias a tu cuenta, empres y tus productos que vendes si aun no resgitras tu empresa hazlo ya </p> 
+                                  <p>da clic aqui para registrar tu empresa  <a class="nav-link" href="{{route('empresa')}}"><i class="fa fa-sign-out-alt"></i>Registrar Empresa</a></p>
                             </div>
                             <div class="tab-pane fade" id="orders-tab" role="tabpanel" aria-labelledby="orders-nav">
                                 <div class="table-responsive">

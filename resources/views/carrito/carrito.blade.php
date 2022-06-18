@@ -11,7 +11,7 @@
         
 
 
-        <nav class="nav justify-content-end">
+      
             @if(session('carrito'))
                 <a class="nav-link" href="{{url('carrito')}}">
                 El carrito contenido: {{count(session('carrito'))}}Articulos

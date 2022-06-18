@@ -71,14 +71,42 @@
 
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto">
-                            <a href="{{route('principal')}}" class="nav-item nav-link active">Home</a>
+
+                        <?php 
+            $sessionusuario=session('idusuario');
+                             ?>
+
+                            @if($sessionusuario = null)
+                                <a href="{{route('principal')}}" class="nav-item nav-link active">Home</a>
                             <a href="{{route('tablap')}}" class="nav-item nav-link">Productos</a>
-                            <a href="" class="nav-item nav-link">Empresas</a>
+                            <a href="{{route('tablae')}}" class="nav-item nav-link">Empresas</a>
                             <a href="{{route('carrito')}}" class="nav-item nav-link">Carrito</a>
                             <a href="{{route('vista_compras')}}" class="nav-item nav-link">Compras realizadas</a>
                             <a href="{{route('contacto')}}" class="nav-item nav-link">Conocenos</a>
-                            <a href="{{route('cuenta')}}" class="nav-item nav-link">Mi cuenta</a>
-                            
+                            <a href="{{route('login')}}" class="nav-item nav-link">Iniciar sesion</a>
+
+                             
+                             @else
+                             <a href="{{route('principal')}}" class="nav-item nav-link active">Home</a>
+                            <a href="{{route('tablap')}}" class="nav-item nav-link">Productos</a>
+                            <a href="{{route('tablae')}}" class="nav-item nav-link">Empresas</a>
+                            <a href="{{route('carrito')}}" class="nav-item nav-link">Carrito</a>
+                            <a href="{{route('vista_compras')}}" class="nav-item nav-link">Compras realizadas</a>
+                            <a href="{{route('contacto')}}" class="nav-item nav-link">Conocenos</a>
+                          
+                            <div class="navbar-nav ml-auto">
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Cuenta</a>
+                                <div class="dropdown-menu">
+                                <a href="{{route('cuenta')}}" class="nav-item nav-link">Mi cuenta</a>
+                                <a class="nav-link" href="{{route('cerrarsession')}}"><i class="fa fa-sign-out-alt"></i>Cerrar Sesion</a>
+                             
+                                </div>
+                            </div>
+                        </div>
+
+                             
+                @endif
                         </div>
                         <div class="navbar-nav ml-auto">
                             <div class="nav-item dropdown">

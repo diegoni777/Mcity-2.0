@@ -1,21 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mcity</title>
-
-  
-
-    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="{{ URL::asset ('Login/style.css') }}">
-   
-
-
-</head>
-<!DOCTYPE html>
-<html lang="en">
     <head>
         <meta charset="utf-8">
         <title>M city</title>
@@ -24,7 +8,7 @@
         <meta content="eCommerce HTML Template Free Download" name="description">
 
         <!-- Favicon -->
-        <link href="img/favicon.ico" rel="icon">
+        <link href="plantilla/img/favicon.ico" rel="icon">
 
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap" rel="stylesheet">
@@ -71,15 +55,46 @@
 
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto">
+
+
+                            <?php 
+            $sessionusuario=session('idusuario');
+                             ?>
+
+                            @if($sessionusuario = null)
                             <a href="{{route('principal')}}" class="nav-item nav-link active">Home</a>
-                            <a href="product-detail.html" class="nav-item nav-link"></a>
                             <a href="{{route('tablap')}}" class="nav-item nav-link">Productos</a>
-                            <a href="" class="nav-item nav-link">Empresas</a>
+                            <a href="{{route('tablae')}}" class="nav-item nav-link">Empresas</a>
                             <a href="{{route('carrito')}}" class="nav-item nav-link">Carrito</a>
                             <a href="{{route('vista_compras')}}" class="nav-item nav-link">Compras realizadas</a>
                             <a href="{{route('contacto')}}" class="nav-item nav-link">Conocenos</a>
-                            <a href="{{route('cuenta')}}" class="nav-item nav-link">Mi cuenta</a>
+                            <a href="{{route('login')}}" class="nav-item nav-link">Iniciar sesion</a>
+
+                             
+                             @else
+                             <a href="{{route('principal')}}" class="nav-item nav-link active">Home</a>
+                            <a href="{{route('tablap')}}" class="nav-item nav-link">Productos</a>
+                            <a href="{{route('tablae')}}" class="nav-item nav-link">Empresas</a>
+                            <a href="{{route('carrito')}}" class="nav-item nav-link">Carrito</a>
+                            <a href="{{route('vista_compras')}}" class="nav-item nav-link">Compras realizadas</a>
+                            <a href="{{route('contacto')}}" class="nav-item nav-link">Conocenos</a>
                             
+
+                            <div class="navbar-nav ml-auto">
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Cuenta</a>
+                                <div class="dropdown-menu">
+                                <a href="{{route('cuenta')}}" class="nav-item nav-link">Mi cuenta</a>
+                                <a class="nav-link" href="{{route('cerrarsession')}}"><i class="fa fa-sign-out-alt"></i>Cerrar Sesion</a>
+                             
+                                </div>
+                            </div>
+                        </div>
+
+                           
+                             
+                @endif
+                        
                         </div>
                         <div class="navbar-nav ml-auto">
                             <div class="nav-item dropdown">
@@ -151,7 +166,7 @@
                     </div>
                   
                     <!--Contendio-->
-                    <div class="content">
+                    
 
                         @yield('contenido')
                     </div>
@@ -347,6 +362,6 @@
         <script src="plantilla/lib/slick/slick.min.js"></script>
         
         <!-- Template Javascript -->
-        <script src="{{ URL::asset ('js/main.js') }}"></script>
+        <script src="plantilla/js/main.js"></script>
     </body>
 </html>

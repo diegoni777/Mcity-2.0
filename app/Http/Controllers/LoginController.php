@@ -23,6 +23,20 @@ class LoginController extends Controller
         return view('admin');
     }
 
+    public function cerrarsession(Request $request){
+
+        Session::forget('sessionusuario');
+            Session::forget('sessiontipo');
+            Session::forget('idusuario');
+                
+            Session::flush();
+                $request->session()->forget('idusuario');
+                $request->session()->forget('sessiontipo');
+                $request->session()->forget('sessionusuario');
+
+                return redirect('/');
+    }
+
     //Creamos las validaciones//
 
     public function valida(Request $request)
