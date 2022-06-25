@@ -52,6 +52,8 @@ class UsuariosController extends Controller
         ]);
         $passwordEncriptado = Hash::make($request->password);
     
+        
+
         $usuarios = new Usuarios;
         $usuarios->idu = $request->idu;
         $usuarios->nombre = $request->nombre;
