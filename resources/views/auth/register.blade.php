@@ -30,11 +30,11 @@
             <label >Usuario</label>
         <input class="input" type="text" placeholder="Usuario123" name="nombre"  >
 
-        <label >Empresa</label>
-        <input class="input" type="text" placeholder="Ingresa tu Empresa" name="empresa"  ><br>
+        
+        <input class="input" type="hidden" placeholder="Ingresa tu Empresa" name="empresa" value="empresa fantasma" ><br>
 
         <label >detalles</label>
-        <input class="input" type="text" name="detalles"  >
+        <input class="input" type="hidden" name="detalles" value="empresa"  >
 
         <label >Foto de Perfil</label>
         <input class="input" type="file" name="fotou"  ><br>
