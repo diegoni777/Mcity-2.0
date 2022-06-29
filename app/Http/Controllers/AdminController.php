@@ -7,6 +7,10 @@ use App\Models\Usuarios;
 
 class AdminController extends Controller
 {
+    public function ver_inicio(){
+        return view('admin/inicioadmin');
+        }
+        
     public function lista(){
         $usuarios = usuarios::all();
         return view("admin/admin")

@@ -85,6 +85,7 @@ Route::get('tablae',[EmpresaController::class,'tablae'])->name('tablae');
 
 //-------------------------consultas----------------------------//
 Route::get('admin',[AdminController::class,'lista'])->name('admin');
+Route::get('inicioadmin',[AdminController::class,'ver_inicio'])->name('inicioadmin');
 Route::get('adminp',[AdminpController::class,'lista'])->name('adminp');
 
 

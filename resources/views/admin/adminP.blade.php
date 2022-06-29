@@ -1,118 +1,205 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Pagina de administrador</title>
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://bootswatch.com/5/cyborg/bootstrap.min.css">  
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="plantilla/css/admin.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ URL::asset ('plantilla/css/admin.css') }}">     
-       
-       
-       
-       </style>
-       
-    </head>
-    <body class="therichpost-light-grey">
-        <!-- Top container -->
-<div class="therichpost-bar therichpost-top therichpost-black therichpost-large" style="z-index:4">
-  <button class="therichpost-bar-item therichpost-button therichpost-hide-large therichpost-hover-none therichpost-hover-text-light-grey" onclick="therichpost_open()"><i class="fa fa-bars"></i>  Menu</button>
-  <span class="therichpost-bar-item therichpost-right">Logo</span>
-</div>
-<!-- Sidebar/menu -->
-<nav class="therichpost-sidebar therichpost-collapse therichpost-white therichpost-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
-  <div class="therichpost-container therichpost-row">
-    <div class="therichpost-col s4">
-      <img src="img/usu9.png" alt="Logo" class="therichpost-circle therichpost-margin-right" style="width:90px">
-    </div>
-    <div class="therichpost-col s8 therichpost-bar">
-    <?php 
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pagina de Administrador</title>
+	<link href="{{ URL::asset ('adminstyle/css/bootstrap.min.css') }}" rel="stylesheet">
+	<link href="{{ URL::asset ('adminstyle/css/font-awesome.min.css') }}" rel="stylesheet">
+	<link href="{{ URL::asset ('adminstyle/css/datepicker3.css') }}" rel="stylesheet">
+	<link href="{{ URL::asset ('adminstyle/css/styles.css') }}" rel="stylesheet">
+	
+	<!--Custom Font-->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+<?php 
             $sessionusuario=session('sessionusuario');
         ?>
-      <span>Bienvenido, <strong>  
-    <p> <?php echo $sessionusuario?> </strong></span></p><br>
+       
      
-    </div>
-  </div>
-  <hr>
-  <div class="therichpost-container">
-    <h5>Pagina de administracion</h5>
-  </div>
-  <div class="therichpost-bar-block">
-    <a href="#" class="therichpost-bar-item therichpost-button therichpost-padding-16 therichpost-hide-large therichpost-dark-grey therichpost-hover-black" onclick="therichpost_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
-    <a href="{{route('admin')}}" class="therichpost-bar-item therichpost-button therichpost-padding therichpost-blue"><i class="fa fa-users fa-fw"></i>Usuarios</a>
-    <a href="{{route('adminp')}}" class="therichpost-bar-item therichpost-button therichpost-padding"><i class="fa fa-eye fa-fw"></i>  Productos</a>
-    <a href="{{route('adminv')}}" class="therichpost-bar-item therichpost-button therichpost-padding"><i class="fa fa-users fa-fw"></i> Ventas</a>
-    <a href="#" class="therichpost-bar-item therichpost-button therichpost-padding"><i class="fa fa-cog fa-fw"></i>  Historial</a><br><br>
-    <a href="{{route('principal')}}" class="therichpost-bar-item therichpost-button therichpost-padding"> Pagina Principal</a><br><br>
-    
-  </div>
-</nav>
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="therichpost-overlay therichpost-hide-large therichpost-animate-opacity" onclick="therichpost_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-<!-- !PAGE CONTENT! -->
-<div class="therichpost-main" style="margin-left:300px;margin-top:43px;">
-  <!-- Header -->
-  <header class="therichpost-container" style="padding-top:22px">
-    <h5><b><i class="fa fa-dashboard"></i> Datos de la pagina</b></h5>
-  </header>
-  <div class="therichpost-row-padding therichpost-margin-bottom">
-    <div class="therichpost-quarter">
-      <div class="therichpost-container therichpost-red therichpost-padding-16">
-        <div class="therichpost-left"><i class="fa fa-comment therichpost-xxxlarge"></i></div>
-        <div class="therichpost-right">
-          <h3></h3>
-        </div>
-        <div class="therichpost-clear"></div>
-        <h4>Detalles de venta</h4>
-      </div>
-    </div>
-    <div class="therichpost-quarter">
-      <div class="therichpost-container therichpost-blue therichpost-padding-16">
-        <div class="therichpost-left"><i class="fa fa-eye therichpost-xxxlarge"></i></div>
-        <div class="therichpost-right">
-          <h3></h3>
-        </div>
-        <div class="therichpost-clear"></div>
-        <h4>Productos</h4>
-      </div>
-    </div>
-    <div class="therichpost-quarter">
-      <div class="therichpost-container therichpost-teal therichpost-padding-16">
-        <div class="therichpost-left"><i class="fa fa-share-alt therichpost-xxxlarge"></i></div>
-        <div class="therichpost-right">
-          <h3></h3>
-        </div>
-        <div class="therichpost-clear"></div>
-        <h4>Historial</h4>
-      </div>
-    </div>
-    <div class="therichpost-quarter">
-      <div class="therichpost-container therichpost-orange therichpost-text-white therichpost-padding-16">
-        <div class="therichpost-left"><i class="fa fa-users therichpost-xxxlarge"></i></div>
-        <div class="therichpost-right">
-          <h3></h3>
-        </div>
-        <div class="therichpost-clear"></div>
-        <h4>Usuarios</h4>
-      </div>
-    </div>
-  </div>
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse"><span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span></button>
+				<a class="navbar-brand" href="{{route('inicioadmin')}}"><span>Mcity</span>Admin</a>
+				<ul class="nav navbar-top-links navbar-right">
+					<li class="dropdown"><a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+						<em class="fa fa-envelope"></em><span class="label label-danger">15</span>
+					</a>
+						<ul class="dropdown-menu dropdown-messages">
+							<li>
+								<div class="dropdown-messages-box"><a href="profile.html" class="pull-left">
+									<img alt="image" class="img-circle" src="http://placehold.it/40/30a5ff/fff">
+									</a>
+									<div class="message-body"><small class="pull-right">3 mins ago</small>
+										<a href="#"><strong>John Doe</strong> commented on <strong>your photo</strong>.</a>
+									<br /><small class="text-muted">1:24 pm - 25/03/2015</small></div>
+								</div>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<div class="dropdown-messages-box"><a href="profile.html" class="pull-left">
+									<img alt="image" class="img-circle" src="http://placehold.it/40/30a5ff/fff">
+									</a>
+									<div class="message-body"><small class="pull-right">1 hour ago</small>
+										<a href="#">New message from <strong>Jane Doe</strong>.</a>
+									<br /><small class="text-muted">12:27 pm - 25/03/2015</small></div>
+								</div>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<div class="all-button"><a href="#">
+									<em class="fa fa-inbox"></em> <strong>All Messages</strong>
+								</a></div>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown"><a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+						<em class="fa fa-bell"></em><span class="label label-info">5</span>
+					</a>
+						<ul class="dropdown-menu dropdown-alerts">
+							<li><a href="#">
+								<div><em class="fa fa-envelope"></em> 1 New Message
+									<span class="pull-right text-muted small">3 mins ago</span></div>
+							</a></li>
+							<li class="divider"></li>
+							<li><a href="#">
+								<div><em class="fa fa-heart"></em> 12 New Likes
+									<span class="pull-right text-muted small">4 mins ago</span></div>
+							</a></li>
+							<li class="divider"></li>
+							<li><a href="#">
+								<div><em class="fa fa-user"></em> 5 New Followers
+									<span class="pull-right text-muted small">4 mins ago</span></div>
+							</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div><!-- /.container-fluid -->
+	</nav>
+	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+		<div class="profile-sidebar">
+			<div class="profile-userpic">
+				<img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">
+			</div>
+			<div class="profile-usertitle">
+				<div class="profile-usertitle-name"><h5>  <?php echo $sessionusuario?> </h5></div>
+				<div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="divider"></div>
+		<form role="search">
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Search">
+			</div>
+		</form>
+		<ul class="nav menu">
+			<li class="active"><a href="{{route('inicioadmin')}}"><em class="fa fa-dashboard">&nbsp;</em> Pagina principal</a></li>
+      
+
+			<li><a href=""><em class="fa fa-calendar">&nbsp;</em> Reportes</a></li>
+			<li><a href=""><em class="fa fa-bar-chart">&nbsp;</em> Historial</a></li>
 
 
-  
-  <div class="therichpost-panel">
+		
+			<li class="parent "><a data-toggle="collapse" href="#sub-item-1">
+				<em class="fa fa-navicon">&nbsp;</em> Registros <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span>
+				</a>
+				<ul class="children collapse" id="sub-item-1">
+					<li><a class="" href="{{route('admin')}}">
+						<span class="fa fa-arrow-right">&nbsp;</span>Usuarios
+					</a></li>
+					<li><a class="" href="{{route('adminp')}}">
+						<span class="fa fa-arrow-right">&nbsp;</span> Productos
+					</a></li>
+					<li><a class="" href="">
+						<span class="fa fa-arrow-right">&nbsp;</span> Empresas
+					</a></li>
+          <li><a class="" href="{{route('adminv')}}">
+						<span class="fa fa-arrow-right">&nbsp;</span> Ventas
+					</a></li>
+				</ul>
+			</li>
+
+      <li><a href="{{route('principal')}}"><em class="fa fa-sign-out-alt">&nbsp;</em>Pagina de usuario</a></li>
+			<li><a href="{{route('login')}}"> <em class="fa fa-power-off">&nbsp;</em> Cerrar sesion</a></li>
+		</ul>
+	</div><!--/.sidebar-->
+		
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+		<div class="row">
+			<ol class="breadcrumb">
+				<li><a href="#">
+					<em class="fa fa-home"></em>
+				</a></li>
+				<li class="active">Pagina principal</li>
+			</ol>
+		</div><!--/.row-->
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">Dashboard</h1>
+			</div>
+		</div><!--/.row-->
+		
+		<div class="panel panel-container">
+			<div class="row">
+				<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+					<div class="panel panel-teal panel-widget border-right">
+						<div class="row no-padding"><em class="fa fa-xl fa-shopping-cart color-blue"></em>
+							<div class="large">120</div>
+							<div class="text-muted">New Orders</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+					<div class="panel panel-blue panel-widget border-right">
+						<div class="row no-padding"><em class="fa fa-xl fa-comments color-orange"></em>
+							<div class="large">52</div>
+							<div class="text-muted">Comments</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+					<div class="panel panel-orange panel-widget border-right">
+						<div class="row no-padding"><em class="fa fa-xl fa-users color-teal"></em>
+							<div class="large">24</div>
+							<div class="text-muted">New Users</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+					<div class="panel panel-red panel-widget ">
+						<div class="row no-padding"><em class="fa fa-xl fa-search color-red"></em>
+							<div class="large">25.2k</div>
+							<div class="text-muted">Page Views</div>
+						</div>
+					</div>
+				</div>
+			</div><!--/.row-->
+		</div>
+		
+
+    <div class="therichpost-panel">
     <div class="therichpost-row-padding" style="margin:0 -16px">
       <div class="therichpost-third">
-        <h5>CRUDS</h5>
-        <img src="{{ asset('img/crud2.png') }}" style="width:100%" alt="Google Regional Map">
+        <h2>CRUDS</h2>
+        
       </div>
       <div class="therichpost-twothird">
-        <h5>Vista de crud</h5>
-
+        <h4>Vista de crud</h4>
+<center>
 
         <table class="scroll" class="table table-hover">
           <tr>
@@ -152,40 +239,33 @@
      
  
         </table>
+</center>
         <a href="{{route('alta_productos')}}" class="therichpost-bar-item therichpost-button therichpost-padding">Nuevo Producto</a>
       </div>
     </div>
   </div>
   <hr>
- 
- 
- 
-  <!-- Footer -->
-  <footer class="therichpost-container therichpost-padding-16 therichpost-light-grey">
-   
-  </footer>
-  <!-- End page content -->
-</div>
-<script>
-// Get the Sidebar
-var mySidebar = document.getElementById("mySidebar");
-// Get the DIV with overlay effect
-var overlayBg = document.getElementById("myOverlay");
-// Toggle between showing and hiding the sidebar, and add overlay effect
-function therichpost_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-    overlayBg.style.display = "none";
-  } else {
-    mySidebar.style.display = 'block';
-    overlayBg.style.display = "block";
-  }
-}
-// Close the sidebar with the close button
-function therichpost_close() {
-  mySidebar.style.display = "none";
-  overlayBg.style.display = "none";
-}
-</script>
- </body>
+
+  
+	<script src="adminstyle/js/jquery-1.11.1.min.js"></script>
+	<script src="adminstyle/js/bootstrap.min.js"></script>
+	<script src="adminstyle/js/chart.min.js"></script>
+	<script src="adminstyle/js/chart-data.js"></script>
+	<script src="adminstyle/js/easypiechart.js"></script>
+	<script src="adminstyle/js/easypiechart-data.js"></script>
+	<script src="adminstyle/js/bootstrap-datepicker.js"></script>
+	<script src="{{ URL::asset ('adminstyle/js//custom.js') }}"></script>
+	<script>
+		window.onload = function () {
+	var chart1 = document.getElementById("line-chart").getContext("2d");
+	window.myLine = new Chart(chart1).Line(lineChartData, {
+	responsive: true,
+	scaleLineColor: "rgba(0,0,0,.2)",
+	scaleGridLineColor: "rgba(0,0,0,.05)",
+	scaleFontColor: "#c5c7cc"
+	});
+};
+	</script>
+		
+</body>
 </html>

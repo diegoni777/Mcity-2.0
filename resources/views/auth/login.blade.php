@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" type="text/css" href="{{ URL::asset ('plantilla/css/style2.css') }}">
+     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 
     <title>Login</title>
@@ -46,7 +47,12 @@
         <input class="input" type="password" placeholder="Contraseña" name="password" id="password">
 
                 <p>Olvidaste tu contraseña? <span class="span">Click aqui</span></p>
+
+                <div class="g-recaptcha" data-sitekey="6Lf605sgAAAAAJzN3I1DEbizo-OLYQL7qWdRyE5c"></div>
                 <button class="btn">Iniciar </button>
+
+      
+               
 
                 <p>No tienes una cuenta? <a class="span" href="{{ route('alta_usuarios') }}">Registrate</a></p>
                 <p><a class="span" href="{{ route('/') }}">Salir</a></p>
