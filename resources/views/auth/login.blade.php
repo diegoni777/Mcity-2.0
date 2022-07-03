@@ -48,7 +48,7 @@
 
                 <p>Olvidaste tu contraseña? <span class="span">Click aqui</span></p>
 
-                <div class="g-recaptcha" data-sitekey="6Lf605sgAAAAAJzN3I1DEbizo-OLYQL7qWdRyE5c"></div>
+                <div class="g-recaptcha" data-sitekey="6LeupvUfAAAAAGcJ6PA5cQNMyY1wn0lRSvZgt2qE"></div>
                 <button class="btn">Iniciar </button>
 
       

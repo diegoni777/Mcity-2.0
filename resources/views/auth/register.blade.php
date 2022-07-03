@@ -50,7 +50,7 @@
         <input class="input100" type="hidden" name="tipou" value="usuario" placeholder="Tipo usuario" readonly >
         
       
-        <div class="g-recaptcha" data-sitekey="6Lf605sgAAAAAJzN3I1DEbizo-OLYQL7qWdRyE5c"></div>
+        <div class="g-recaptcha" data-sitekey="6LeupvUfAAAAAGcJ6PA5cQNMyY1wn0lRSvZgt2qE"></div>
       <br/>
       
 
