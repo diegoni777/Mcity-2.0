@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-mx">
 <head>
 <link rel="stylesheet" href="https://bootswatch.com/5/cyborg/bootstrap.min.css">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Registro de Usuarios</title>
+    <title>Edición de Usuarios</title>
     <div class="container mt-2">
         <div class="card">
             <div class="card-body bg-primary mt-2 ">
@@ -44,21 +44,23 @@
 
      <tr>
      <td>Empresa:</td>
-     <td><input type="text" name="empresa" value="{{ $usuarios->empresa }}"></td>
+     <td><input type="text" name="empresa" value="{{ $usuarios->empresa }}" readonly></td>
      </tr>
 
      </tr>
      <td>Detalles:</td>
-     <td><input type="text" name="detalles" value="{{ $usuarios->detalles }}"></td>
+     <td><input type="text" name="detalles" value="{{ $usuarios->detalles }}" readonly></td>
      </td>
      </tr>
      </tr>
      <td>Tipo de Usuario:</td>
-     <td><input type="text" name="tipou" value="{{ $usuarios->tipo }}"></td>
-     </td>
+     <td><select type="text" name="tipou" value="{{ $usuarios->tipou }}">
+        <option>usuario</option>
+        <option>admin</option>
+    </select></td>
      </tr>
      <td>Foto:</td>
-     <td><input type="file" name="fotop1"></td>
+     <td><input type="file" name="fotou1"></td>
      <td><input type="text" name="fotou" value="{{ $usuarios->fotou }}"></td>
 </td>
 </tr>
