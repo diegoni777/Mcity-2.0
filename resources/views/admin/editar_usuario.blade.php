@@ -65,14 +65,7 @@
      <td>Correo:</td>
      <td><input type="text" name="correo" value="{{ $usuarios->correo }}"></td>
      </td>
-     </tr>
-
-<tr>
-<td>Foto De Producto:</td>
-     <input type="file" name="fotop1">
-     <input type="text" name="fotou" value="{{ $usuarios->fotou }}">
-</td>
-</tr>          
+     </tr>    
           <tr>
           <td colspan="2">
                <input type="submit" value="Salvar"> | <a href="{{ route('admin') }}">Regresar</a>
