@@ -65,7 +65,7 @@
                     <div class="col-md-3">
                         <div class="logo">
                         <a href="{{route('/')}}" class="nav-item nav-link active">
-                                <img src="img/logo6.png" alt="Logo">
+                        <img src="img/mcitylogo.jpeg" width="100" height="250" alt="Logo">
                             </a>
                         </div>
                     </div>
