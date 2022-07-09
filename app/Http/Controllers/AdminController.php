@@ -10,17 +10,17 @@ class AdminController extends Controller
     public function ver_inicio(){
         return view('admin/inicioadmin');
         }
-        
+        //Listar Usuarios//
     public function lista(){
-        $usuarios = usuarios::all();
+        $usuarios = Usuarios::all();
         return view("admin/admin")
-        ->with(['usuarios' => $usuarios]);
+        ->with(['usuarios' => $usuarios]);  
     }
-    //---------------borrar producto--------------///
-    public function borrar1u(){
-        $usuarios = usuarios::all();
-        return view("admin")
-        ->with(['usuarios' => $usuarios]);
+    //---------------Borrar usuario--------------///
+    public function borrar1u($idu){
+        $usuarios = Usuarios::find($idu);
+        $usuarios->delete();
+        return redirect()->route('admin');
    
 }
 //--------------vista detalle--------------//
@@ -37,7 +37,7 @@ public function editar_usuario($idu){
     ->with(['usuarios' => $usuarios]);
 }
 ///----------guardar actualizacion--------//
-public function salvarusu(Productos $idu, Request $request){
+public function salvarusu(Usuarios $idu, Request $request){
     if($request->file('fotop1') != ''){
  //---------------------------------Foto, videos, archivos, etc-------------
        $file = $request->file('fotop1');
@@ -50,7 +50,7 @@ public function salvarusu(Productos $idu, Request $request){
          else{
           $fotou = $request->fotop;
   }
-       $query = Productos::find($idu->idu);
+       $query = Usuarios::find($idu->idu);
          $query->idu = $request->idu;
          $query->nombre = $request->nombre;
          $query->empresa = $request->empresa;

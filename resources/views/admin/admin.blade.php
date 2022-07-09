@@ -223,11 +223,11 @@
                   <td>
                       <a href="{{ route('detalleusu',['idu' => $usuarios->idu]) }}" >Detalle</a>
                       <a href="{{ route('editar_usuario',['idu' => $usuarios->idu]) }}" >Editar</a>
-
-                    <form name="borrar1" action="" method="POST">
+					
+                    <form action="{{ route('borrar1u',['idu'=> $usuarios->idu]) }}" method="POST">
                           {{ csrf_field() }}
                           {{ method_field('DELETE') }}
-                            <input type="submit" value="Borrar 1">
+                            <input type="submit" value="borrar1">
                        </form>
                        <a href="">Borrar 2</a>
                   </td>
