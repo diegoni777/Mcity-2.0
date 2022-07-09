@@ -245,7 +245,7 @@
                   <td>{{ $usuarios->detalles}}</td>
                   <td>{{ $usuarios->tipou }}</td>
                   <td>{{ $usuarios->correo }}</td>
-                  <td> <img src="{{ asset('archivos/'. $usuarios->fotou)}}"  width="80" height="100" alt="Product Image"></td>
+                  <td> <img src="{{ asset('archivos/'. $usuarios->fotou)}}"  width="80" height="100" alt="User Image"></td>
                   
                   <td>
 				  		<form action="{{ route('detalleusu',['idu' => $usuarios->idu]) }}" method="POST">
