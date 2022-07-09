@@ -94,14 +94,14 @@
 			</div>
 			<div class="profile-usertitle">
 				<div class="profile-usertitle-name"><h5>  <?php echo $sessionusuario?> </h5></div>
-				<div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
+				<div class="profile-usertitle-status"><span class="indicator label-success"></span>Conectado</div>
 			</div>
 			<div class="clear"></div>
 		</div>
 		<div class="divider"></div>
 		<form role="search">
 			<div class="form-group">
-				<input type="text" class="form-control" placeholder="Search">
+				<input type="text" class="form-control" placeholder="Buscar">
 			</div>
 		</form>
 		<ul class="nav menu">
@@ -199,7 +199,7 @@
       <div class="therichpost-twothird">
         <h4>Vista de crud</h4>
         <center>
-        <table class="scroll" witdh="100">
+        <table class="table table-bordered border-primary" witdh="100">
           <tr>
            
               <td>ID</td>
@@ -218,18 +218,26 @@
                   <td>{{ $usuarios->detalles}}</td>
                   <td>{{ $usuarios->tipou }}</td>
                   <td>{{ $usuarios->correo }}</td>
-                  <td>{{ $usuarios->fotou }}</td>
+                  <td> <img src="{{ asset('archivos/'. $usuarios->fotou)}}"  width="80" height="100" alt="Product Image"></td>
                   
                   <td>
-                      <a href="{{ route('detalleusu',['idu' => $usuarios->idu]) }}" >Detalle</a>
-                      <a href="{{ route('editar_usuario',['idu' => $usuarios->idu]) }}" >Editar</a>
+				  		<form action="{{ route('detalleusu',['idu' => $usuarios->idu]) }}" method="POST">
+                          {{ csrf_field() }}
+                          {{ method_field('GET') }}
+                            <input type="submit" class="btn btn-info" value="Detalle">
+                       	</form>
+					   	<form action="{{ route('editar_usuario',['idu' => $usuarios->idu]) }}" method="POST">
+                          {{ csrf_field() }}
+                          {{ method_field('GET') }}
+                            <input type="submit" class="btn btn-success" value="Editar">
+                       	</form>
 					
                     <form action="{{ route('borrar1u',['idu'=> $usuarios->idu]) }}" method="POST">
                           {{ csrf_field() }}
                           {{ method_field('DELETE') }}
-                            <input type="submit" value="borrar1">
+                            <input type="submit" class="btn btn-danger" value="Borrar">
                        </form>
-                       <a href="">Borrar 2</a>
+                       <a href="">Inhabilitar</a>
                   </td>
              </tr>
              @endforeach
