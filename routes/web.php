@@ -103,7 +103,7 @@ Route::name('salvar')->put('/salvar/{idp}',[AdminpController::class, 'salvar']);
 
 //-------------------------usuarios-------------------------//
 //------------------------borrar------------------------------//
-Route::delete('borrar1u',[AdminController::class,'borrar1u'])->name('borrar1');
+Route::name('borrar1u')->delete('/borrar1u/{idu}',[AdminController::class,'borrar1u']);
 
 //------------------------detalle------------------------------//
 Route::name('detalleusu')->get('/detalleusu/{idu}',[AdminController::class, 'detalleusu']);

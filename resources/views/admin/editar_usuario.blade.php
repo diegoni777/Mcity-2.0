@@ -57,7 +57,12 @@
      <td><input type="text" name="tipou" value="{{ $usuarios->tipo }}"></td>
      </td>
      </tr>
-     <td>Correo::</td>
+     <td>Foto:</td>
+     <td><input type="file" name="fotop1"></td>
+     <td><input type="text" name="fotou" value="{{ $usuarios->fotou }}"></td>
+</td>
+</tr>
+     <td>Correo:</td>
      <td><input type="text" name="correo" value="{{ $usuarios->correo }}"></td>
      </td>
      </tr>
