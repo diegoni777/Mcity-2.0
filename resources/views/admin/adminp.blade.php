@@ -94,14 +94,14 @@
 			</div>
 			<div class="profile-usertitle">
 				<div class="profile-usertitle-name"><h5>  <?php echo $sessionusuario?> </h5></div>
-				<div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
+				<div class="profile-usertitle-status"><span class="indicator label-success"></span>Conectado</div>
 			</div>
 			<div class="clear"></div>
 		</div>
 		<div class="divider"></div>
 		<form role="search">
 			<div class="form-group">
-				<input type="text" class="form-control" placeholder="Search">
+				<input type="text" class="form-control" placeholder="Buscar">
 			</div>
 		</form>
 		<ul class="nav menu">
@@ -149,7 +149,7 @@
 		
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Dashboard</h1>
+				<h1 class="page-header">Tablero</h1>
 			</div>
 		</div><!--/.row-->
 		
@@ -201,7 +201,7 @@
         <h4>Vista de crud</h4>
 <center>
 
-        <table class="scroll" class="table table-hover">
+        <table class="table table-bordered border-primary">
           <tr>
            
               <td>ID</td>
@@ -218,18 +218,25 @@
                   <td>{{ $productos->codigo }}</td>
                   <td>{{ $productos->tipo }}</td>
                   <td>{{ $productos->precio}}</td>
-                  <td>{{ $productos->fotop }}</td>
+                  <td> <img src="{{ asset('archivos/'. $productos->fotop)}}"  width="80" height="100" alt="Product Image"></td>
                   
                   
                   
                   <td>
-                      <a href="{{ route('detalle',['idp' => $productos->idp]) }}" >Detalle</a>
-                      <a href="{{ route('editar_producto',['idp' => $productos->idp]) }}" >Editar</a>
-
-                    <form name="borrar1" action="{{ route('borrar1',['idp'=> $productos->idp]) }}" method="POST">
+					  	<form action="{{ route('detalle',['idp' => $productos->idp]) }}" method="POST">
+                          {{ csrf_field() }}
+                          {{ method_field('GET') }}
+                            <input type="submit" class="btn btn-info" value="Detalle">
+                    	</form>
+					  	<form action="{{ route('editar_producto',['idp' => $productos->idp]) }}" method="POST">
+                          {{ csrf_field() }}
+                          {{ method_field('GET') }}
+                            <input type="submit" class="btn btn-success" value="Editar">
+                       	</form>
+                    <form name="borrar1p" action="{{ route('borrar1p',['idp'=> $productos->idp]) }}" method="POST">
                           {{ csrf_field() }}
                           {{ method_field('DELETE') }}
-                            <input type="submit" value="Borrar">
+                            <input type="submit" class="btn btn-danger" value="Borrar">
                        </form>
                        
                   </td>

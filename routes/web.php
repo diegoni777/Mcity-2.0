@@ -91,7 +91,7 @@ Route::get('adminp',[AdminpController::class,'lista'])->name('adminp');
 
 //-----------------------productos---------------------------//
 //------------------------borrar------------------------------//
-Route::delete('borrar1',[AdminpController::class,'borrar1'])->name('borrar1');
+Route::name('borrar1p')->delete('/borrar1p/{idp}',[AdminpController::class,'borrar1p']);
 
 //------------------------detalle------------------------------//
 Route::name('detalle')->get('/detalle/{idp}',[AdminpController::class, 'detalle']);

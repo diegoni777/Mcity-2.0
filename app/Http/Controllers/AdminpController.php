@@ -9,16 +9,16 @@ class AdminpController extends Controller
 {
     //---------------tabla-------------//
     public function lista(){
-        $productos = productos::all();
+        $productos = Productos::all();
         return view("admin/adminp")
         ->with(['productos' => $productos]);
     }
 
-//---------------borrar producto--------------///
-    public function borrar1(){
-        $productos = productos::all();
-        return view("adminp")
-        ->with(['productos' => $productos]);
+//---------------borrar producto--------------//
+        public function borrar1p($idp){
+            $productos = Productos::find($idp);
+            $productos->delete();
+            return redirect()->route('adminp');
    
 }
 //--------------vista detalle--------------//
