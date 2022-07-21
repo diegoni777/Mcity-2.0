@@ -49,6 +49,7 @@ class UsuariosController extends Controller
             'fotou'=>'required',
             'correo'=>'required',
             'password'=>'required',
+            'g-recaptcha-response' => 'required|captcha'
         ]);
         $passwordEncriptado = Hash::make($request->password);
     

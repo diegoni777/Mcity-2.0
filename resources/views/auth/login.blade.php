@@ -1,68 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-mx">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" type="text/css" href="{{ URL::asset ('plantilla/css/style2.css') }}">
-     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset ('plantilla/css/style2.css') }}">
 
 
     <title>Login</title>
 </head>
+
 <body>
-<form action="{{ route ('valida') }}" method="POST">
-    {{ csrf_field() }}
+    <form action="{{ route ('valida') }}" method="POST">
+        {{ csrf_field() }}
 
-        
+
         @if (session('status'))
-		    <div class="alert alert-danger">
-		        {{ session('status') }}
-		    </div>
-	    @endif
+        <div class="alert alert-danger">
+            {{ session('status') }}
+        </div>
+        @endif
 
-      <div class="login-container">
-          <div class="login-info-container">
-            <h1 class="title">Micty Store</h1>
+        <div class="login-container">
+            <div class="login-info-container">
+                <h1 class="title">Micty Store</h1>
 
-            <div class="social-login">
-                <div class="social-login-element">
-                    <img src="{{ URL::asset ('img/google.svg') }}" alt="google-image">
-                    <span>Google</span>
+                <div class="social-login">
+                    <div class="social-login-element">
+                        <img src="{{ URL::asset ('img/google.svg') }}" alt="google-image">
+                        <span>Google</span>
+                    </div>
+
+
+                    <div class="social-login-element">
+                        <img src="{{ URL::asset ('img/facebook.svg') }}" alt="facebook-image">
+                        <span>Facebook</span>
+                    </div>
                 </div>
 
+                <p>o</p>
+                <form class="inputs-container">
+                    <label for="username">Correo</label>
+                    <input class="input" type="text" placeholder="Ingresa tu correo Electrónico" name="correo" id="correo">
 
-                <div class="social-login-element">
-                    <img src="{{ URL::asset ('img/facebook.svg') }}" alt="facebook-image">
-                    <span>Facebook</span>
-                </div>
+                    <label for="password">Contraseña</label>
+                    <input class="input" type="password" placeholder="Contraseña" name="password" id="password">
+
+                    <p>Olvidaste tu contraseña? <span class="span">Click aqui</span></p>
+                    {!! NoCaptcha::renderJs() !!}
+                    {!! NoCaptcha::display(['data-theme' => 'dark']) !!}
+                    @if ($errors->has('g-recaptcha-response'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                    </span>
+                    @endif
+                    <button class="btn">Iniciar </button>
+
+                    <p>No tienes una cuenta? <a class="span" href="{{ route('alta_usuarios') }}">Registrate</a></p>
+                    <p><a class="span" href="{{ route('/') }}">Salir</a></p>
+
+
+                </form>
+
             </div>
-
-            <p>o</p>
-            <form class="inputs-container">
-            <label for="username">Correo</label>
-        <input class="input" type="text" placeholder="Ingresa tu correo Electrónico" name="correo" id="correo" >
-
-        <label for="password">Contraseña</label>
-        <input class="input" type="password" placeholder="Contraseña" name="password" id="password">
-
-                <p>Olvidaste tu contraseña? <span class="span">Click aqui</span></p>
-
-                <div class="g-recaptcha" data-sitekey="6LeupvUfAAAAAGcJ6PA5cQNMyY1wn0lRSvZgt2qE"></div>
-                <button class="btn">Iniciar </button>
-
-      
-               
-
-                <p>No tienes una cuenta? <a class="span" href="{{ route('alta_usuarios') }}">Registrate</a></p>
-                <p><a class="span" href="{{ route('/') }}">Salir</a></p>
-                
-                
-            </form>
-            
-          </div>
             <img class="image-container" src="{{ URL::asset ('img/login.svg') }}" alt="">
-      </div>
+        </div>
 
 </body>
+
 </html>

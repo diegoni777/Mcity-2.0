@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Usuarios;
-use DB;
 use Illuminate\Support\Facades\Hash;
 use Session;
 
@@ -43,11 +42,13 @@ class LoginController extends Controller
     {
         $this ->validate($request,[
         'correo'=>'email|required|email',
-        'password'=>'required|min:5|alpha_num',      
+        'password'=>'required|min:5|alpha_num', 
+        'g-recaptcha-response' => 'required|captcha'     
         ]);
     
         $correo = $request->input('correo');
         $password =$request ->input('password');
+        
 
 
 
