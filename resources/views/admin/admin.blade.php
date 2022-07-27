@@ -8,7 +8,8 @@
 	<link href="{{ URL::asset ('adminstyle/css/font-awesome.min.css') }}" rel="stylesheet">
 	<link href="{{ URL::asset ('adminstyle/css/datepicker3.css') }}" rel="stylesheet">
 	<link href="{{ URL::asset ('adminstyle/css/styles.css') }}" rel="stylesheet">
-	<link href="{{ URL::asset ('adminstyle/css/modal.css') }}" rel="stylesheet">
+	<link href="{{ URL::asset ('adminstyle/css/table.css') }}" rel="stylesheet">
+	
 	<!--Custom Font-->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 	<!--[if lt IE 9]>
@@ -90,7 +91,7 @@
 	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
 		<div class="profile-sidebar">
 			<div class="profile-userpic">
-				<img src="img/usu9.png" class="img-responsive" alt="">
+				<img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">
 			</div>
 			<div class="profile-usertitle">
 				<div class="profile-usertitle-name"><h5>  <?php echo $sessionusuario?> </h5></div>
@@ -123,7 +124,7 @@
 					<li><a class="" href="{{route('adminp')}}">
 						<span class="fa fa-arrow-right">&nbsp;</span> Productos
 					</a></li>
-					<li><a class="" href="#">
+					<li><a class="" href="">
 						<span class="fa fa-arrow-right">&nbsp;</span> Empresas
 					</a></li>
           <li><a class="" href="{{route('adminv')}}">
@@ -133,34 +134,7 @@
 			</li>
 
       <li><a href="{{route('principal')}}"><em class="fa fa-sign-out-alt">&nbsp;</em>Pagina de usuario</a></li>
-			<li>
-
-			<input type="checkbox" id="btn-modal">
-			<label for="btn-modal" class="lbl-modal"><em class="fa fa-power-off">&nbsp;</em> Cerrar Sesion </label>
-
-<div class="modal">
-<div  class="contenedor">
-
-<header>Advertencia</header>
-<label for="btn-modal">X</label>
-<div class="contenido">
-
-<center>
-<img src="img/exclmacion2.jpg" width="100" height="100" alt="Product Image">
-<h2> ¿Estas seguro?</h2>
-<p> Estas a punto de cerrar sesion </p>
-<a href="{{route('cerrarsession')}}"><em class="fa fa-sign-out">&nbsp;</em>Si ,Cerrar Sesion</a>  &nbsp; &nbsp; &nbsp;
-<a href="{{route('admin')}}"><em class="fa fa-times-circle">&nbsp;</em>No ,Cancelar</a></li>
-
-</center>
-
-</div>
-</div>
-</div>
-
-
-
-		</li>
+			<li><a href="{{route('login')}}"> <em class="fa fa-power-off">&nbsp;</em> Cerrar sesion</a></li>
 		</ul>
 	</div><!--/.sidebar-->
 		
@@ -176,7 +150,7 @@
 		
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Administracion</h1>
+				<h1 class="page-header">Tablero</h1>
 			</div>
 		</div><!--/.row-->
 		
@@ -217,16 +191,17 @@
 			</div><!--/.row-->
 		</div>
 		
-
-    <div class="therichpost-panel">
+		<div class="therichpost-panel">
     <div class="therichpost-row-padding" style="margin:0 -16px">
       <div class="therichpost-third">
         <h2>CRUDS</h2>
       </div>
       <div class="therichpost-twothird">
-        <h4>Vista de crud</h4>
+        <h4>Vista de Usuarios</h4>
+<a href="{{route('alta_usuarios2')}}" class="btn btn-info"> Nuevo Usuario</a>
         <center>
         <table class="table table-bordered border-primary" witdh="100">
+<thead>
           <tr>
            
               <td>ID</td>
@@ -236,7 +211,9 @@
               <td>tipo</td>
               <td>correo</td>
               <td>foto</td>
+			  <td>Opciones</td>
              </tr>
+</thead>
              @foreach($usuarios as $usuarios)
              <tr>
                   <td>{{ $usuarios->idu }}</td>
@@ -273,11 +250,11 @@
  
         </table>
         </center>
-        <a href="{{route('alta_usuarios')}}" class="therichpost-bar-item therichpost-button therichpost-padding"> Nuevo Usuario</a>
+</div>
+        
       </div>
     </div>
   </div>
-  <hr>
 
   
 	<script src="adminstyle/js/jquery-1.11.1.min.js"></script>

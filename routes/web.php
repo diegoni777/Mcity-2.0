@@ -43,8 +43,9 @@ use Illuminate\Support\Facades\Route;
 
     //Alta nuevo usuario//
     Route::get('alta_usuarios',[UsuariosController::class,'alta_usuarios'])->name('alta_usuarios');
+    Route::get('alta_usuarios2',[UsuariosController::class,'alta_usuarios2'])->name('alta_usuarios2');
     Route::post('guarda_usuarios',[UsuariosController::class,'guarda_usuarios'])->name('guarda_usuarios');
-
+    Route::post('guarda_admin',[UsuariosController::class,'guarda_admin'])->name('guarda_admin');
 
 
 //.......................productos.....................................//

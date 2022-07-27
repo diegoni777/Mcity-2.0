@@ -8,6 +8,7 @@
 	<link href="{{ URL::asset ('adminstyle/css/font-awesome.min.css') }}" rel="stylesheet">
 	<link href="{{ URL::asset ('adminstyle/css/datepicker3.css') }}" rel="stylesheet">
 	<link href="{{ URL::asset ('adminstyle/css/styles.css') }}" rel="stylesheet">
+	<link href="{{ URL::asset ('adminstyle/css/table.css') }}" rel="stylesheet">
 	
 	<!--Custom Font-->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -198,10 +199,12 @@
         
       </div>
       <div class="therichpost-twothird">
-        <h4>Vista de crud</h4>
+        <h4>Vista de Productos</h4>
+		<a href="{{route('alta_productos')}}" class="btn btn-info">Nuevo Producto</a>
 <center>
 
         <table class="table table-bordered border-primary">
+<thead>
           <tr>
            
               <td>ID</td>
@@ -210,7 +213,9 @@
               <td>tipo</td>
               <td>precio</td>
               <td>fotop</td>
+			  <td>Opciones</td>
              </tr>
+</thead>
              @foreach($productos as $productos)
              <tr>
                   <td>{{ $productos->idp }}</td>
@@ -247,7 +252,8 @@
  
         </table>
 </center>
-        <a href="{{route('alta_productos')}}" class="therichpost-bar-item therichpost-button therichpost-padding">Nuevo Producto</a>
+</div>
+        
       </div>
     </div>
   </div>
