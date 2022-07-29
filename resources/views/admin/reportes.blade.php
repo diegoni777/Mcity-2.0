@@ -108,7 +108,7 @@
 			<li class="active"><a href="{{route('inicioadmin')}}"><em class="fa fa-dashboard">&nbsp;</em> Pagina principal</a></li>
       
 
-			<li><a href="{{route('reportes')}}"><em class="fa fa-calendar">&nbsp;</em> Reportes</a></li>
+			<li><a href=""><em class="fa fa-calendar">&nbsp;</em> Reportes</a></li>
 			<li><a href=""><em class="fa fa-bar-chart">&nbsp;</em> Historial</a></li>
 
 
@@ -194,66 +194,84 @@
     <div class="therichpost-panel">
     <div class="therichpost-row-padding" style="margin:0 -16px">
       <div class="therichpost-third">
-        <h2>CRUDS xD</h2>
+        <h2>CRUDS</h2>
       </div>
-	  <p style="text-align: right">
-		<a href="{{ route('ReporteUsuarios') }}"> pdf</a>
-	</p>
-
-	<a  style="text-align: right" href="{{ route('ExportUsuarios') }}" >
-		exportar Usuarios
-	</a>
-
-
       <div class="therichpost-twothird">
         <h4>Vista de crud</h4>
         <center>
-        <table class="table table-bordered border-primary" witdh="100">
-          <tr>
-           
-              <td>ID</td>
-              <td>nombre</td>
-              <td>empresa</td>
-              <td>detalles</td>
-              <td>tipo</td>
-              <td>correo</td>
-              <td>foto</td>
-             </tr>
-             @foreach($usuarios as $usuarios)
-             <tr>
-                  <td>{{ $usuarios->idu }}</td>
-                  <td>{{ $usuarios->nombre }}</td>
-                  <td>{{ $usuarios->empresa }}</td>
-                  <td>{{ $usuarios->detalles}}</td>
-                  <td>{{ $usuarios->tipou }}</td>
-                  <td>{{ $usuarios->correo }}</td>
-                  <td> <img src="{{ asset('archivos/'. $usuarios->fotou)}}"  width="80" height="100" alt="Product Image"></td>
-                  
-                  <td>
-				  		<form action="{{ route('detalleusu',['idu' => $usuarios->idu]) }}" method="POST">
-                          {{ csrf_field() }}
-                          {{ method_field('GET') }}
-                            <input type="submit" class="btn btn-info" value="Detalle">
-                       	</form>
-					   	<form action="{{ route('editar_usuario',['idu' => $usuarios->idu]) }}" method="POST">
-                          {{ csrf_field() }}
-                          {{ method_field('GET') }}
-                            <input type="submit" class="btn btn-success" value="Editar">
-                       	</form>
-					
-                    <form action="{{ route('borrar1u',['idu'=> $usuarios->idu]) }}" method="POST">
-                          {{ csrf_field() }}
-                          {{ method_field('DELETE') }}
-                            <input type="submit" class="btn btn-danger" value="Borrar">
-                       </form>
-                       <a href="">Inhabilitar</a>
-                  </td>
-             </tr>
-             @endforeach
+        
+			<div class="examle-wrap">
+				
+				<div class="example">
+					<div class="panel-group" id="exampleAccordionDefault" aria-multiselectable="true" role="tablist">
+						
+						<div class="panel">
+							<div class="panel-heading bg-warning  text-center text-white" id="exampleHeadingDefaultFour"
+								role="tab">
+								<a class="panel-title collapsed" data-toggle="collapse" href="#exampleCollapseDefaultFour"
+									data-parent="#exampleAccordionDefault" aria-expanded="false"
+									aria-controls="exampleCollapseDefaultFour">Reporte
+									de Usuarios</a>
+							</div>
+							<div class="panel-collapse collapse" id="exampleCollapseDefaultFour"
+								aria-labelledby="exampleHeadingDefaultFour" role="tabpanel">
+								<div class="panel-body">
+									<!-- Example Tabs -->
+									<div class="example-wrap">
+										<div class="nav-tabs-horizontal" data-plugin="tabs">
+											
+											<div class="tab-content pt-20">
+												<div class="tab-pane active" id="exampleTabsOne" role="tabpanel">
 
-     
- 
-        </table>
+													<div class="row">
+														<div class="col-12 col-sm-6">
+															<a type="button" 
+															href="{{ route('ReporteUsuarios') }}"  
+															class="btn btn-danger">PDF</a>
+														</div>
+
+														<div class="col-12 col-sm-6">
+															<a type="button"  
+															href="{{ route('ExportUsuarios') }}"
+															class="btn btn-success">Excel
+															</a>
+														</div>
+													</div>
+													
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+
+
+
+
         </center>
         <a href="{{route('alta_usuarios')}}" class="therichpost-bar-item therichpost-button therichpost-padding"> Nuevo Usuario</a>
       </div>

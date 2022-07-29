@@ -116,3 +116,12 @@ Route::name('salvarusu')->put('/salvarusu/{idu}',[AdminController::class, 'salva
 Route::name('guardar_compra')->get('guardar_compra',[ComprasController::class,'guardar_compra']);
 Route::name('adminv')->get('adminv',[ComprasController::class,'vista_ventas']);
 Route::name('vista_compras')->get('vista_compras',[ComprasController::class,'vista_compras']);
+
+//RUTA PARA GENERAR UN PDF 
+
+Route::name('ReporteUsuarios')->get('/ReporteUsuarios',[AdminController::class, 'ReporteUsuarios']);
+
+//Exportar alumnos
+Route::name('ExportUsuarios')->get('/ExportUsuarios',[AdminController::class, 'ExportUsuarios']);
+
+Route::get('reportes',[AdminController::class,'Reportes'])->name('reportes');

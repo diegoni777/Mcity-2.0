@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Usuarios;
+use Barryvdh\DomPDF\Facade\Pdf;
+use App\Exports\UsuariosExport;
+use Maatwebsite\Excel\Facades\Excel;
+
 
 class AdminController extends Controller
 {
@@ -13,6 +17,7 @@ class AdminController extends Controller
         //Listar Usuarios//
     public function lista(){
         $usuarios = Usuarios::all();
+        //return $usuarios;
         return view("admin/admin")
         ->with(['usuarios' => $usuarios]);  
     }
@@ -61,6 +66,29 @@ public function salvarusu(Usuarios $idu, Request $request){
          $query->save();
          return redirect()->route('detalleusu', ['idu' => $idu->idu]);
   }
+
+    public function ReporteUsuarios(){
+        
+    //Consulta que nos regresa todos los datos
+    $usuarios = Usuarios::all();
+    //el return nos devuelve los datos en forma de json para ver que nos devuelve la consulta
+    //return $alumnos;
+    //Mandamos los datos a una vista 
+
+    $pdf  = PDF::loadView('reportes.ReporteUsuarios', compact('usuarios'));
+    return $pdf->stream('usuarios.pdf');
+
+    }
+
+    public function ExportUsuarios() {
+        return Excel::download(new UsuariosExport, 'Usuarios.xlsx');
+    }
+
+    public function Reportes(){
+    
+        //return $usuarios;
+        return view("admin/reportes");  
+    }
 
 
 }
