@@ -3,7 +3,7 @@
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>Reporte de alumnos</title>
+        <title>Reporte de Ventas</title>
 
         <style>
             @import 'https://fonts.googleapis.com/css2?family=Archivo&display=swap';

@@ -3,7 +3,7 @@
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>Reporte de alumnos</title>
+        <title>Reporte de Usuarios</title>
 
         <style>
             @import 'https://fonts.googleapis.com/css2?family=Archivo&display=swap';
@@ -115,18 +115,20 @@
             <table>
                 <thead style="background: #395870;">
                     <tr>
-                        <th>ID</th>
-                        <th>Matricula</th>
+                    
                         <th>Nombre</th>
-                        <th>Fecha de N.</th>
-                        <th>Genero</th>
+                        <th>detalles</th>
+                        <th>empresa</th>
+                        <th>Tipo</th>
+                        <th>Correo</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($usuarios as $usuario)
                     <tr>
-                        <td>{{ $usuario->idu}}</td>
+                        
                         <td>{{ $usuario->nombre }}</td>
+                        <td>{{ $usuario->detalles }}</td>
                         <td>{{ $usuario->empresa }}</td>
                         <td>{{ $usuario->tipou }}</td>
                         <td>{{ $usuario->correo}}</td>
