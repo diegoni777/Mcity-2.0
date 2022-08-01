@@ -58,6 +58,9 @@
 
 
                             <?php 
+                             
+                           
+                                     
             $sessionusuario=session('idusuario');
                              ?>
 
@@ -85,8 +88,11 @@
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Cuenta</a>
                                 <div class="dropdown-menu">
                                 <a href="{{route('cuenta')}}" class="nav-item nav-link">Mi cuenta</a>
-                                <a class="nav-link" href="{{route('cerrarsession')}}"><i class="fa fa-sign-out-alt"></i>Cerrar Sesion</a>
-                             
+
+                                <form name="cerrarsesison" action="{{route('cerrarsession')}}" method="GET">
+                                
+                                <button type="submit" class="btn btn-xs btn-danger btn-flat show-alert-delete-box btn-sm" data-toggle="tooltip" title='Delete'>cerrar session</button>
+</form>
                                 </div>
                             </div>
                         </div>
@@ -114,7 +120,7 @@
                     <div class="col-md-3">
                         <div class="logo">
                         <a href="{{route('principal')}}" class="nav-item nav-link active">
-                                <img src="img/logo6.png" alt="Logo">
+                                <img src="img/mcitylogo.jpeg" alt="Logo">
                             </a>
                         </div>
                     </div>
@@ -219,7 +225,7 @@
                             </div>
                             <div class="product-price">
                                 <h3><span>$</span>220</h3>
-                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Comprar</a>
                             </div>
                         </div>
                     </div>
@@ -245,7 +251,7 @@
                             </div>
                             <div class="product-price">
                                 <h3><span>$</span>99</h3>
-                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Comprar</a>
                             </div>
                         </div>
                     </div>
@@ -271,7 +277,7 @@
                             </div>
                             <div class="product-price">
                                 <h3><span>$</span>149</h3>
-                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Comprar</a>
                             </div>
                         </div>
                     </div>
@@ -297,7 +303,7 @@
                             </div>
                             <div class="product-price">
                                 <h3><span>$</span>129</h3>
-                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Comprar</a>
                             </div>
                         </div>
                     </div>
@@ -323,7 +329,7 @@
                             </div>
                             <div class="product-price">
                                 <h3><span>$</span>99</h3>
-                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Comprar</a>
                             </div>
                         </div>
                     </div>
@@ -349,11 +355,8 @@
             </div>
         </div>
         <!-- Footer Bottom End -->  
-       
-        <!-- Footer Bottom End -->       
-        
-        <!-- Back to Top -->
-        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <!-- Back to Top -->
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
         
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

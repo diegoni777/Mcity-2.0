@@ -1,21 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mcity</title>
-
-  
-
-    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="{{ URL::asset ('Login/style.css') }}">
-   
-
-
-</head>
-<!DOCTYPE html>
-<html lang="en">
     <head>
         <meta charset="utf-8">
         <title>M city</title>
@@ -24,7 +8,7 @@
         <meta content="eCommerce HTML Template Free Download" name="description">
 
         <!-- Favicon -->
-        <link href="img/favicon.ico" rel="icon">
+        <link href="plantilla/img/favicon.ico" rel="icon">
 
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap" rel="stylesheet">
@@ -73,6 +57,9 @@
                         <div class="navbar-nav mr-auto">
 
                         <?php 
+                        
+                    
+                                 
             $sessionusuario=session('idusuario');
                              ?>
 
@@ -99,7 +86,10 @@
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Cuenta</a>
                                 <div class="dropdown-menu">
                                 <a href="{{route('cuenta')}}" class="nav-item nav-link">Mi cuenta</a>
-                                <a class="nav-link" href="{{route('cerrarsession')}}"><i class="fa fa-sign-out-alt"></i>Cerrar Sesion</a>
+                               
+                                
+                                <button  id="boton" type="submit" class="btn btn-xs btn-danger btn-flat show-alert-delete-box btn-sm" data-toggle="tooltip" title='Delete'>cerrar session</button>
+
                              
                                 </div>
                             </div>
@@ -126,7 +116,7 @@
                     <div class="col-md-3">
                         <div class="logo">
                         <a href="{{route('principal')}}" class="nav-item nav-link active">
-                                <img src="img/logo6.png" alt="Logo">
+                        <img src="img/mcitylogo.jpeg" alt="Logo">
                             </a>
                         </div>
                     </div>
@@ -201,7 +191,7 @@
                             </div>
                             <div class="product-price">
                                 <h3><span>$</span>220</h3>
-                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Comprar</a>
                             </div>
                         </div>
                     </div>
@@ -227,7 +217,7 @@
                             </div>
                             <div class="product-price">
                                 <h3><span>$</span>99</h3>
-                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Comprar</a>
                             </div>
                         </div>
                     </div>
@@ -253,7 +243,7 @@
                             </div>
                             <div class="product-price">
                                 <h3><span>$</span>149</h3>
-                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Comprar</a>
                             </div>
                         </div>
                     </div>
@@ -279,7 +269,7 @@
                             </div>
                             <div class="product-price">
                                 <h3><span>$</span>129</h3>
-                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Comprar</a>
                             </div>
                         </div>
                     </div>
@@ -305,7 +295,7 @@
                             </div>
                             <div class="product-price">
                                 <h3><span>$</span>99</h3>
-                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Comprar</a>
                             </div>
                         </div>
                     </div>
@@ -331,11 +321,8 @@
             </div>
         </div>
         <!-- Footer Bottom End -->  
-       
-        <!-- Footer Bottom End -->       
-        
-        <!-- Back to Top -->
-        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+      <!-- Back to Top -->
+      <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
         
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -344,6 +331,6 @@
         <script src="plantilla/lib/slick/slick.min.js"></script>
         
         <!-- Template Javascript -->
-        <script src="{{ URL::asset ('js/main.js') }}"></script>
+        <script src="plantilla/js/main.js"></script>
     </body>
 </html>

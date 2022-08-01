@@ -65,7 +65,7 @@
                     <div class="col-md-3">
                         <div class="logo">
                         <a href="{{route('/')}}" class="nav-item nav-link active">
-                                <img src="img/logo6.png" alt="Logo">
+                        <img src="img/mcitylogo.jpeg" width="100" height="250" alt="Logo">
                             </a>
                         </div>
                     </div>
@@ -301,7 +301,7 @@
                             </div>
                             <div class="product-price">
                                 <h3><span>$</span>220</h3>
-                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Comprar</a>
                             </div>
                         </div>
                     </div>
@@ -327,7 +327,7 @@
                             </div>
                             <div class="product-price">
                                 <h3><span>$</span>99</h3>
-                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Comprar</a>
                             </div>
                         </div>
                     </div>
@@ -353,7 +353,7 @@
                             </div>
                             <div class="product-price">
                                 <h3><span>$</span>149</h3>
-                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Comprar</a>
                             </div>
                         </div>
                     </div>
@@ -379,7 +379,7 @@
                             </div>
                             <div class="product-price">
                                 <h3><span>$</span>129</h3>
-                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Comprar</a>
                             </div>
                         </div>
                     </div>
@@ -405,7 +405,7 @@
                             </div>
                             <div class="product-price">
                                 <h3><span>$</span>99</h3>
-                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Comprar</a>
                             </div>
                         </div>
                     </div>

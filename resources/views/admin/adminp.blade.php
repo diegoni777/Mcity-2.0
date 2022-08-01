@@ -42,7 +42,7 @@
 									<img alt="image" class="img-circle" src="http://placehold.it/40/30a5ff/fff">
 									</a>
 									<div class="message-body"><small class="pull-right">Hace 3 minutos</small>
-										<a href="#"><strong>Diego</strong> Comentado <strong>Tu foto</strong>.</a>
+										<a href="#"><strong>John Doe</strong> Comentado <strong>Tu foto</strong>.</a>
 									<br /><small class="text-muted">1:24 pm - 25/03/2022</small></div>
 								</div>
 							</li>
@@ -52,7 +52,7 @@
 									<img alt="image" class="img-circle" src="http://placehold.it/40/30a5ff/fff">
 									</a>
 									<div class="message-body"><small class="pull-right">Hace 1 hora</small>
-										<a href="#">mensaje nuevo <strong>Jose paquito</strong>.</a>
+										<a href="#">Nuevo mensaje de  <strong>Jane Doe</strong>.</a>
 									<br /><small class="text-muted">12:27 pm - 25/03/2022</small></div>
 								</div>
 							</li>
@@ -70,17 +70,17 @@
 						<ul class="dropdown-menu dropdown-alerts">
 							<li><a href="#">
 								<div><em class="fa fa-envelope"></em> 1 mensaje nuevo
-									<span class="pull-right text-muted small">hace 3 minitos</span></div>
+									<span class="pull-right text-muted small">Hace 3 minutos</span></div>
 							</a></li>
 							<li class="divider"></li>
 							<li><a href="#">
-								<div><em class="fa fa-heart"></em> 12 likes nuevos
+								<div><em class="fa fa-heart"></em> 12 nuevos me gusta
 									<span class="pull-right text-muted small">Hace 4 minutos</span></div>
 							</a></li>
 							<li class="divider"></li>
 							<li><a href="#">
-								<div><em class="fa fa-user"></em> 5 Nuevos seguidores
-									<span class="pull-right text-muted small">Hace 4 minutos</span></div>
+								<div><em class="fa fa-user"></em> 5 New Followers
+									<span class="pull-right text-muted small">4 mins ago</span></div>
 							</a></li>
 						</ul>
 					</li>
@@ -91,7 +91,7 @@
 	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
 		<div class="profile-sidebar">
 			<div class="profile-userpic">
-				<img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">
+			<img src="img/usu9.png" class="img-responsive" alt="">
 			</div>
 			<div class="profile-usertitle">
 				<div class="profile-usertitle-name"><h5>  <?php echo $sessionusuario?> </h5></div>
@@ -109,7 +109,7 @@
 			<li class="active"><a href="{{route('inicioadmin')}}"><em class="fa fa-dashboard">&nbsp;</em> Pagina principal</a></li>
       
 
-			<li><a href="{{route('reportes')}}"><em class="fa fa-calendar">&nbsp;</em> Reportes</a></li>
+			<li><a href=""><em class="fa fa-calendar">&nbsp;</em> Reportes</a></li>
 			<li><a href=""><em class="fa fa-bar-chart">&nbsp;</em> Historial</a></li>
 
 
@@ -160,7 +160,7 @@
 					<div class="panel panel-teal panel-widget border-right">
 						<div class="row no-padding"><em class="fa fa-xl fa-shopping-cart color-blue"></em>
 							<div class="large">120</div>
-							<div class="text-muted">Nuevas ordenes</div>
+							<div class="text-muted">Nuevas ordenas</div>
 						</div>
 					</div>
 				</div>
@@ -176,7 +176,7 @@
 					<div class="panel panel-orange panel-widget border-right">
 						<div class="row no-padding"><em class="fa fa-xl fa-users color-teal"></em>
 							<div class="large">24</div>
-							<div class="text-muted">usuarios nuevos</div>
+							<div class="text-muted">Nuevos usuarios</div>
 						</div>
 					</div>
 				</div>
@@ -184,73 +184,66 @@
 					<div class="panel panel-red panel-widget ">
 						<div class="row no-padding"><em class="fa fa-xl fa-search color-red"></em>
 							<div class="large">25.2k</div>
-							<div class="text-muted">Vistas de pagina</div>
+							<div class="text-muted">vistas a la pagina</div>
 						</div>
 					</div>
 				</div>
 			</div><!--/.row-->
 		</div>
 		
-		<div class="therichpost-panel">
+
+    <div class="therichpost-panel">
     <div class="therichpost-row-padding" style="margin:0 -16px">
       <div class="therichpost-third">
-        <h2>CRUDS xD</h2>
+        <h2>CRUDS</h2>
+        
       </div>
-	  <p style="text-align: right">
-		<a href="{{ route('ReporteUsuarios') }}"> pdf</a>
-	</p>
-
-	<a  style="text-align: right" href="{{ route('ExportUsuarios') }}" >
-		exportar Usuarios
-	</a>
-
-
       <div class="therichpost-twothird">
-        <h4>Vista de Usuarios</h4>
-<a href="{{route('alta_usuarios2')}}" class="btn btn-info"> Nuevo Usuario</a>
-        <center>
-        <table class="table table-bordered border-primary" witdh="100">
+        <h4>Vista de Productos</h4>
+		<a href="{{route('alta_productos')}}" class="btn btn-info">Nuevo Producto</a>
+<center>
+
+        <table class="table table-bordered border-primary">
 <thead>
           <tr>
            
               <td>ID</td>
-              <td>nombre</td>
-              <td>empresa</td>
-              <td>detalles</td>
+              <td>producto</td>
+              <td>codigo</td>
               <td>tipo</td>
-              <td>correo</td>
-              <td>foto</td>
+              <td>precio</td>
+              <td>fotop</td>
 			  <td>Opciones</td>
              </tr>
 </thead>
-             @foreach($usuarios as $usuarios)
+             @foreach($productos as $productos)
              <tr>
-                  <td>{{ $usuarios->idu }}</td>
-                  <td>{{ $usuarios->nombre }}</td>
-                  <td>{{ $usuarios->empresa }}</td>
-                  <td>{{ $usuarios->detalles}}</td>
-                  <td>{{ $usuarios->tipou }}</td>
-                  <td>{{ $usuarios->correo }}</td>
-                  <td> <img src="{{ asset('archivos/'. $usuarios->fotou)}}"  width="80" height="100" alt="User Image"></td>
+                  <td>{{ $productos->idp }}</td>
+                  <td>{{ $productos->producto }}</td>
+                  <td>{{ $productos->codigo }}</td>
+                  <td>{{ $productos->tipo }}</td>
+                  <td>{{ $productos->precio}}</td>
+                  <td> <img src="{{ asset('archivos/'. $productos->fotop)}}"  width="80" height="100" alt="Product Image"></td>
+                  
+                  
                   
                   <td>
-				  		<form action="{{ route('detalleusu',['idu' => $usuarios->idu]) }}" method="POST">
+					  	<form action="{{ route('detalle',['idp' => $productos->idp]) }}" method="POST">
                           {{ csrf_field() }}
                           {{ method_field('GET') }}
                             <input type="submit" class="btn btn-info" value="Detalle">
-                       	</form>
-					   	<form action="{{ route('editar_usuario',['idu' => $usuarios->idu]) }}" method="POST">
+                    	</form>
+					  	<form action="{{ route('editar_producto',['idp' => $productos->idp]) }}" method="POST">
                           {{ csrf_field() }}
                           {{ method_field('GET') }}
                             <input type="submit" class="btn btn-success" value="Editar">
                        	</form>
-					
-                    <form action="{{ route('borrar1u',['idu'=> $usuarios->idu]) }}" method="POST">
+                    <form name="borrar1p" action="{{ route('borrar1p',['idp'=> $productos->idp]) }}" method="POST">
                           {{ csrf_field() }}
                           {{ method_field('DELETE') }}
-                            <input type="submit" class="btn btn-danger" value="Borrar">
+                            <input type="submit" class="btn btn-danger"value="Borrar">
                        </form>
-                       <a href="">Inhabilitar</a>
+                       
                   </td>
              </tr>
              @endforeach
@@ -258,12 +251,13 @@
      
  
         </table>
-        </center>
+</center>
 </div>
         
       </div>
     </div>
   </div>
+  <hr>
 
   
 	<script src="adminstyle/js/jquery-1.11.1.min.js"></script>
