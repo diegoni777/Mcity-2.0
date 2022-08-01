@@ -125,3 +125,15 @@ Route::name('ReporteUsuarios')->get('/ReporteUsuarios',[AdminController::class, 
 Route::name('ExportUsuarios')->get('/ExportUsuarios',[AdminController::class, 'ExportUsuarios']);
 
 Route::get('reportes',[AdminController::class,'Reportes'])->name('reportes');
+
+//RUTA PARA GENERAR reporte de ventas 
+
+Route::name('ReporteVentas')->get('/ReporteVentas',[AdminController::class, 'ReporteVentas']);
+
+Route::name('ExportVentas')->get('/ExportVentas',[AdminController::class, 'ExportVentas']);
+
+//RUTA PARA GENERAR reporte de Products 
+
+Route::name('ReportProducts')->get('/ReportProducts',[AdminController::class, 'ReportProducts']);
+
+Route::name('ExportProductos')->get('/ExportProductos',[AdminController::class, 'ExportProductos']);

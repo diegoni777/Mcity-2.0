@@ -108,7 +108,7 @@
 			<li class="active"><a href="{{route('inicioadmin')}}"><em class="fa fa-dashboard">&nbsp;</em> Pagina principal</a></li>
       
 
-			<li><a href=""><em class="fa fa-calendar">&nbsp;</em> Reportes</a></li>
+			<li><a href="{{route('reportes')}}"><em class="fa fa-calendar">&nbsp;</em> Reportes</a></li>
 			<li><a href=""><em class="fa fa-bar-chart">&nbsp;</em> Historial</a></li>
 
 

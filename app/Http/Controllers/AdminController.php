@@ -4,8 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Usuarios;
+use App\Models\Compras;
+use App\Models\Productos;
 use Barryvdh\DomPDF\Facade\Pdf;
 use App\Exports\UsuariosExport;
+use App\Exports\VentasExport;
+use App\Exports\ProductsExport;
 use Maatwebsite\Excel\Facades\Excel;
 
 
@@ -67,6 +71,12 @@ public function salvarusu(Usuarios $idu, Request $request){
          return redirect()->route('detalleusu', ['idu' => $idu->idu]);
   }
 
+    public function Reportes(){
+    
+    //return $usuarios;
+    return view("admin/reportes");  
+    }
+    //-----------------------Reportes de Usuarios------------------------------
     public function ReporteUsuarios(){
         
     //Consulta que nos regresa todos los datos
@@ -83,12 +93,38 @@ public function salvarusu(Usuarios $idu, Request $request){
     public function ExportUsuarios() {
         return Excel::download(new UsuariosExport, 'Usuarios.xlsx');
     }
-
-    public function Reportes(){
+    //-------------------------REPORTES DE VENTAS---------------------------------
+    public function ReporteVentas(){
+        
+        
+        $ventas = Compras::all();
     
-        //return $usuarios;
-        return view("admin/reportes");  
+        $pdf  = PDF::loadView('reportes.ReporteVentas', compact('ventas'));
+        return $pdf->stream('ventas.pdf');
+    
+        }
+    
+    public function ExportVentas() {
+            return Excel::download(new VentasExport, 'Ventas.xlsx');
     }
+    //-------------------------REPORTES DE Productos---------------------------------
+    public function ReportProducts(){
+        
+        
+        $products = Productos::all();
+    
+        $pdf  = PDF::loadView('reportes.ReportProducts', compact('products'));
+        return $pdf->stream('Productos.pdf');
+    
+        }
+    
+    public function ExportProductos() {
+            return Excel::download(new ProductsExport, 'Productos.xlsx');
+    }
+
+
+
+    
 
 
 }

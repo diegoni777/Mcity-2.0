@@ -108,7 +108,7 @@
 			<li class="active"><a href="{{route('inicioadmin')}}"><em class="fa fa-dashboard">&nbsp;</em> Pagina principal</a></li>
       
 
-			<li><a href=""><em class="fa fa-calendar">&nbsp;</em> Reportes</a></li>
+			<li><a href=""{{route('reportes')}}"><em class="fa fa-calendar">&nbsp;</em> Reportes</a></li>
 			<li><a href=""><em class="fa fa-bar-chart">&nbsp;</em> Historial</a></li>
 
 
@@ -259,9 +259,99 @@
 									</div>
 								</div>
 							</div>
+							<br>
+							<div class="panel-heading bg-info  text-center text-white" id="exampleHeadingDefaulttwo"
+                            role="tab">
+                            <a class="panel-title collapsed" data-toggle="collapse" href="#exampleCollapseDefaultOne"
+                                data-parent="#exampleAccordionDefault" aria-expanded="false"
+                                aria-controls="exampleCollapseDefaultOne">Reporte de Ventas </a>
+                        </div>
+                        <div class="panel-collapse collapse" id="exampleCollapseDefaultOne"
+                            aria-labelledby="exampleHeadingDefaultOne" role="tabpanel" style="">
+                            <div class="panel-body">
+                                <div class="example-wrap">
+                                    <div class="nav-tabs-horizontal" data-plugin="tabs">
+                                        <div class="tab-content pt-20">
+                                            <div class="tab-pane active" id="producstatusOne" role="tabpanel">
+                                                <form action="estatusGr">
+                                                    <div class="panel panel-bordered">
+                                                        <div class="panel-body">
+                                                            <div class="row">
+                                                                
+																<div class="col-12 col-sm-6">
+																	<a type="button" 
+																	href="{{ route('ReporteVentas') }}"  
+																	class="btn btn-danger">PDF</a>
+																</div>
+		
+																<div class="col-12 col-sm-6">
+																	<a type="button"  
+																	href="{{ route('ExportVentas') }}"
+																	class="btn btn-success">Excel
+																	</a>
+																</div>
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        
+                        </div>
+
+
 						</div>
 					</div>
 				</div>
+				<br>
+					<div class="panel-heading bg-success  text-center text-white" id="exampleHeadingDefaultThree"
+						role="tab">
+						<a class="panel-title collapsed" data-toggle="collapse" href="#exampleCollapseDefaultThree"
+							data-parent="#exampleAccordionDefault" aria-expanded="false"
+							aria-controls="exampleCollapseDefaultThree">Entradas De Productos</a>
+					</div>
+					<div class="panel-collapse collapse" id="exampleCollapseDefaultThree"
+						aria-labelledby="exampleHeadingDefaultThree" role="tabpanel">
+						<div class="panel-body">
+							<div class="example-wrap">
+								<div class="nav-tabs-horizontal" data-plugin="tabs">
+								
+									<div class="tab-content pt-20">
+										<div class="tab-pane active" id="exampleTabsOne" role="tabpanel">
+											<form action="entradas-linea" onkeydown="return event.key != 'Enter';">
+												<div class="panel panel-bordered">
+													<div class="panel-body">
+														<div class="row">
+															
+															<div class="col-12 col-sm-6">
+																<a type="button" 
+																href="{{ route('ReportProducts') }}"  
+																class="btn btn-danger">PDF</a>
+															</div>
+	
+															<div class="col-12 col-sm-6">
+																<a type="button"  
+																href="{{ route('ExportProductos') }}"
+																class="btn btn-success">Excel
+																</a>
+															</div>
+
+														</div>
+													</div>
+												</div>
+												
+											</form>
+										</div>
+									</div>
+									
+									
+								</div>
+							</div>
+							<!-- End Example Tabs -->
+						</div>
+					</div>
 			</div>
 
 
