@@ -41,9 +41,9 @@
 								<div class="dropdown-messages-box"><a href="profile.html" class="pull-left">
 									<img alt="image" class="img-circle" src="http://placehold.it/40/30a5ff/fff">
 									</a>
-									<div class="message-body"><small class="pull-right">Hace 3 minutos</small>
-										<a href="#"><strong>Diego</strong> Comentado <strong>Tu foto</strong>.</a>
-									<br /><small class="text-muted">1:24 pm - 25/03/2022</small></div>
+									<div class="message-body"><small class="pull-right">3 mins ago</small>
+										<a href="#"><strong>John Doe</strong> commented on <strong>your photo</strong>.</a>
+									<br /><small class="text-muted">1:24 pm - 25/03/2015</small></div>
 								</div>
 							</li>
 							<li class="divider"></li>
@@ -51,15 +51,15 @@
 								<div class="dropdown-messages-box"><a href="profile.html" class="pull-left">
 									<img alt="image" class="img-circle" src="http://placehold.it/40/30a5ff/fff">
 									</a>
-									<div class="message-body"><small class="pull-right">Hace 1 hora</small>
-										<a href="#">mensaje nuevo <strong>Jose paquito</strong>.</a>
-									<br /><small class="text-muted">12:27 pm - 25/03/2022</small></div>
+									<div class="message-body"><small class="pull-right">1 hour ago</small>
+										<a href="#">New message from <strong>Jane Doe</strong>.</a>
+									<br /><small class="text-muted">12:27 pm - 25/03/2015</small></div>
 								</div>
 							</li>
 							<li class="divider"></li>
 							<li>
 								<div class="all-button"><a href="#">
-									<em class="fa fa-inbox"></em> <strong>Todos los mensajes</strong>
+									<em class="fa fa-inbox"></em> <strong>All Messages</strong>
 								</a></div>
 							</li>
 						</ul>
@@ -69,18 +69,18 @@
 					</a>
 						<ul class="dropdown-menu dropdown-alerts">
 							<li><a href="#">
-								<div><em class="fa fa-envelope"></em> 1 mensaje nuevo
-									<span class="pull-right text-muted small">hace 3 minitos</span></div>
+								<div><em class="fa fa-envelope"></em> 1 New Message
+									<span class="pull-right text-muted small">3 mins ago</span></div>
 							</a></li>
 							<li class="divider"></li>
 							<li><a href="#">
-								<div><em class="fa fa-heart"></em> 12 likes nuevos
-									<span class="pull-right text-muted small">Hace 4 minutos</span></div>
+								<div><em class="fa fa-heart"></em> 12 New Likes
+									<span class="pull-right text-muted small">4 mins ago</span></div>
 							</a></li>
 							<li class="divider"></li>
 							<li><a href="#">
-								<div><em class="fa fa-user"></em> 5 Nuevos seguidores
-									<span class="pull-right text-muted small">Hace 4 minutos</span></div>
+								<div><em class="fa fa-user"></em> 5 New Followers
+									<span class="pull-right text-muted small">4 mins ago</span></div>
 							</a></li>
 						</ul>
 					</li>
@@ -95,21 +95,21 @@
 			</div>
 			<div class="profile-usertitle">
 				<div class="profile-usertitle-name"><h5>  <?php echo $sessionusuario?> </h5></div>
-				<div class="profile-usertitle-status"><span class="indicator label-success"></span>Conectado</div>
+				<div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
 			</div>
 			<div class="clear"></div>
 		</div>
 		<div class="divider"></div>
 		<form role="search">
 			<div class="form-group">
-				<input type="text" class="form-control" placeholder="Buscar">
+				<input type="text" class="form-control" placeholder="Search">
 			</div>
 		</form>
 		<ul class="nav menu">
 			<li class="active"><a href="{{route('inicioadmin')}}"><em class="fa fa-dashboard">&nbsp;</em> Pagina principal</a></li>
       
 
-			<li><a href="{{route('reportes')}}"><em class="fa fa-calendar">&nbsp;</em> Reportes</a></li>
+			<li><a href=""><em class="fa fa-calendar">&nbsp;</em> Reportes</a></li>
 			<li><a href=""><em class="fa fa-bar-chart">&nbsp;</em> Historial</a></li>
 
 
@@ -124,7 +124,7 @@
 					<li><a class="" href="{{route('adminp')}}">
 						<span class="fa fa-arrow-right">&nbsp;</span> Productos
 					</a></li>
-					<li><a class="" href="">
+					<li><a class="" href="#">
 						<span class="fa fa-arrow-right">&nbsp;</span> Empresas
 					</a></li>
           <li><a class="" href="{{route('adminv')}}">
@@ -150,7 +150,7 @@
 		
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Tablero</h1>
+				<h1 class="page-header">Dashboard</h1>
 			</div>
 		</div><!--/.row-->
 		
@@ -160,7 +160,7 @@
 					<div class="panel panel-teal panel-widget border-right">
 						<div class="row no-padding"><em class="fa fa-xl fa-shopping-cart color-blue"></em>
 							<div class="large">120</div>
-							<div class="text-muted">Nuevas ordenes</div>
+							<div class="text-muted">New Orders</div>
 						</div>
 					</div>
 				</div>
@@ -168,7 +168,7 @@
 					<div class="panel panel-blue panel-widget border-right">
 						<div class="row no-padding"><em class="fa fa-xl fa-comments color-orange"></em>
 							<div class="large">52</div>
-							<div class="text-muted">Comentarios</div>
+							<div class="text-muted">Comments</div>
 						</div>
 					</div>
 				</div>
@@ -176,7 +176,7 @@
 					<div class="panel panel-orange panel-widget border-right">
 						<div class="row no-padding"><em class="fa fa-xl fa-users color-teal"></em>
 							<div class="large">24</div>
-							<div class="text-muted">usuarios nuevos</div>
+							<div class="text-muted">New Users</div>
 						</div>
 					</div>
 				</div>
@@ -184,83 +184,59 @@
 					<div class="panel panel-red panel-widget ">
 						<div class="row no-padding"><em class="fa fa-xl fa-search color-red"></em>
 							<div class="large">25.2k</div>
-							<div class="text-muted">Vistas de pagina</div>
+							<div class="text-muted">Page Views</div>
 						</div>
 					</div>
 				</div>
 			</div><!--/.row-->
 		</div>
 		
-		<div class="therichpost-panel">
+
+    <div class="therichpost-panel">
     <div class="therichpost-row-padding" style="margin:0 -16px">
       <div class="therichpost-third">
-        <h2>CRUDS xD</h2>
+        <h2>CRUDS</h2>
+        
       </div>
-	  <p style="text-align: right">
-		<a href="{{ route('ReporteUsuarios') }}"> pdf</a>
-	</p>
-
-	<a  style="text-align: right" href="{{ route('ExportUsuarios') }}" >
-		exportar Usuarios
-	</a>
-
-
       <div class="therichpost-twothird">
-        <h4>Vista de Usuarios</h4>
-<a href="{{route('alta_usuarios2')}}" class="btn btn-info"> Nuevo Usuario</a>
+        <h4>Vista de crud</h4>
+		<div id="main-container">
         <center>
-        <table class="table table-bordered border-primary" witdh="100">
-<thead>
+        <table class="therichpost-table therichpost-striped therichpost-white">
           <tr>
            
               <td>ID</td>
-              <td>nombre</td>
-              <td>empresa</td>
-              <td>detalles</td>
-              <td>tipo</td>
-              <td>correo</td>
+              <td>Producto</td>
+              <td>Precio</td>
+              <td>cantidad</td>
+              <td>Subtotal</td>
+              <td>Total</td>
               <td>foto</td>
-			  <td>Opciones</td>
              </tr>
-</thead>
-             @foreach($usuarios as $usuarios)
+
+             @foreach($consulta as $consulta)
              <tr>
-                  <td>{{ $usuarios->idu }}</td>
-                  <td>{{ $usuarios->nombre }}</td>
-                  <td>{{ $usuarios->empresa }}</td>
-                  <td>{{ $usuarios->detalles}}</td>
-                  <td>{{ $usuarios->tipou }}</td>
-                  <td>{{ $usuarios->correo }}</td>
-                  <td> <img src="{{ asset('archivos/'. $usuarios->fotou)}}"  width="80" height="100" alt="User Image"></td>
+                  <td>{{ $consulta->id }}</td>
+                  <td>{{ $consulta->producto }}</td>
+                  <td>{{ $consulta->precio}}</td>
+                  <td>{{ $consulta->cantidad }}</td>
+                  <td>{{ $consulta->sub_total}}</td>
+                  <td>{{ $consulta->total}}</td>
+                  <td>{{ $consulta->fotop }}</td>
+                  
                   
                   <td>
-				  		<form action="{{ route('detalleusu',['idu' => $usuarios->idu]) }}" method="POST">
-                          {{ csrf_field() }}
-                          {{ method_field('GET') }}
-                            <input type="submit" class="btn btn-info" value="Detalle">
-                       	</form>
-					   	<form action="{{ route('editar_usuario',['idu' => $usuarios->idu]) }}" method="POST">
-                          {{ csrf_field() }}
-                          {{ method_field('GET') }}
-                            <input type="submit" class="btn btn-success" value="Editar">
-                       	</form>
-					
-                    <form action="{{ route('borrar1u',['idu'=> $usuarios->idu]) }}" method="POST">
-                          {{ csrf_field() }}
-                          {{ method_field('DELETE') }}
-                            <input type="submit" class="btn btn-danger" value="Borrar">
-                       </form>
-                       <a href="">Inhabilitar</a>
+                      
+                       
                   </td>
              </tr>
              @endforeach
 
-     
+            
  
         </table>
-        </center>
+</center>
 </div>
-        
       </div>
     </div>
   </div>

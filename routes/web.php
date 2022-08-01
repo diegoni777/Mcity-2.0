@@ -43,8 +43,9 @@ use Illuminate\Support\Facades\Route;
 
     //Alta nuevo usuario//
     Route::get('alta_usuarios',[UsuariosController::class,'alta_usuarios'])->name('alta_usuarios');
+    Route::get('alta_usuarios2',[UsuariosController::class,'alta_usuarios2'])->name('alta_usuarios2');
     Route::post('guarda_usuarios',[UsuariosController::class,'guarda_usuarios'])->name('guarda_usuarios');
-
+    Route::post('guarda_admin',[UsuariosController::class,'guarda_admin'])->name('guarda_admin');
 
 
 //.......................productos.....................................//
@@ -91,7 +92,7 @@ Route::get('adminp',[AdminpController::class,'lista'])->name('adminp');
 
 //-----------------------productos---------------------------//
 //------------------------borrar------------------------------//
-Route::delete('borrar1',[AdminpController::class,'borrar1'])->name('borrar1');
+Route::name('borrar1p')->delete('/borrar1p/{idp}',[AdminpController::class,'borrar1p']);
 
 //------------------------detalle------------------------------//
 Route::name('detalle')->get('/detalle/{idp}',[AdminpController::class, 'detalle']);

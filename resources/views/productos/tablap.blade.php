@@ -2,7 +2,7 @@
 @section('contenido')
 
      
-        
+       
        
         
         <!-- Breadcrumb Start -->
@@ -100,7 +100,7 @@
                                     </div>
                                     <div class="product-image">
                                         <a href="product-detail.html">
-                                            <img src="{{ asset('archivos/'. $info->fotop)}}" alt="Product Image">
+                                            <img src="{{ asset('archivos/'. $info->fotop)}}" width="100" height="200" alt="Product Image">
                                         </a>
                                         <div class="product-action">
                                             

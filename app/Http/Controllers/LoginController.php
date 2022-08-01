@@ -19,19 +19,13 @@ class LoginController extends Controller
     }
 
     public function admin(){
-        return view('admin');
+        return view('inicioadmin');
     }
 
     public function cerrarsession(Request $request){
 
-        Session::forget('sessionusuario');
-            Session::forget('sessiontipo');
-            Session::forget('idusuario');
-                
-            Session::flush();
-                $request->session()->forget('idusuario');
-                $request->session()->forget('sessiontipo');
-                $request->session()->forget('sessionusuario');
+        $request->session()->forget('idusuario');
+        $request->session()->flush();
 
                 return redirect('/');
     }
@@ -75,7 +69,7 @@ class LoginController extends Controller
                 return redirect('principal')
                 ->with('sessionusuario',$sessionusuario);
             }else{
-                return redirect('admin');
+                return redirect('inicioadmin');
             }
         }else{
             return redirect('auth/login')->with('status', 'No se encontro al usuario');

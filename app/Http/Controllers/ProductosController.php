@@ -60,7 +60,7 @@ class ProductosController extends Controller
         $productos->precio = $request->precio;
         $productos->fotop = $img2;
         $productos->save();
-        return view('productos/adminp');
+        return view('admin/inicioadmin');
     }
 
 

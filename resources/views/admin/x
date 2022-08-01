@@ -1,0 +1,45 @@
+<form action="{{ route ( 'guarda_usuarios' )}}" method="POST" enctype = 'multipart/form-data'>
+    {{ csrf_field() }}
+
+
+      <div class="login-container">
+          <div class="login-info-container">
+           
+            <h2 class="title">Registrate</h2>
+
+          
+           
+          
+            
+            <input class="input100" type="text" name="idu" value="{{$idesigue}}" placeholder="ID" disabled>
+
+            <label >Usuario</label>
+        <input class="input" type="text" placeholder="Usuario123" name="nombre"  >
+
+        
+        <input class="input" type="hidden" placeholder="Ingresa tu Empresa" name="empresa" value="empresa fantasma" ><br>
+
+        <label >detalles</label>
+        <input class="input" type="hidden" name="detalles" value="empresa"  >
+
+        <label >Foto de Perfil</label>
+        <input class="input" type="file" name="fotou"  ><br>
+
+        <label >Correo</label>
+        <input class="input" type="text" placeholder="ejemplo@gmail.com" name="correo"  ><br>
+
+        <label >Password</label>
+        <input class="input" type="password" placeholder="*******" name="password"  ><br>
+
+       
+        
+        <input class="input100" type="hidden" name="tipou" value="usuario" placeholder="Tipo usuario" readonly >
+        
+      
+        <div class="g-recaptcha" data-sitekey="6LeupvUfAAAAAGcJ6PA5cQNMyY1wn0lRSvZgt2qE"></div>
+      <br/>
+      
+
+        <button class="btn">Registrate </button>    <br>  
+
+            </form>

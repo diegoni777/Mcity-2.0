@@ -47,17 +47,17 @@ public function editar_usuario($idu){
 }
 ///----------guardar actualizacion--------//
 public function salvarusu(Usuarios $idu, Request $request){
-    if($request->file('fotop1') != ''){
+    if($request->file('fotou1') != ''){
  //---------------------------------Foto, videos, archivos, etc-------------
-       $file = $request->file('fotop1');
+       $file = $request->file('fotou1');
        $foto = $file->getClientOriginalName();
       
        $date = date('Ymd_His_');
        $fotou = $date . $foto;
-       Storage::disk('local')->put($fotou, \File::get($file));
+       \Storage::disk('local')->put($fotou, \File::get($file));
         }
          else{
-          $fotou = $request->fotop;
+          $fotou = $request->fotou;
   }
        $query = Usuarios::find($idu->idu);
          $query->idu = $request->idu;
