@@ -17,6 +17,9 @@ use App\Http\Controllers\AdminpController;
 use App\Http\Controllers\ContactoController;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\CartController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -138,3 +141,18 @@ Route::name('ExportVentas')->get('/ExportVentas',[AdminController::class, 'Expor
 Route::name('ReportProducts')->get('/ReportProducts',[AdminController::class, 'ReportProducts']);
 
 Route::name('ExportProductos')->get('/ExportProductos',[AdminController::class, 'ExportProductos']);
+
+
+//-----------------------Paypal-------------------------------------------------------
+Route::get('/paypal/pay',[PaymentController::class,'payWithPayPal'])->name('paypal');
+Route::get('/paypal/status',[PaymentController::class,'payPalStatus']);
+
+
+//-------------------NUEVO CARRITO----------------------------------------------------
+Route::post('/cart-add',[CartController::class,'add'])->name('cart.add');
+
+Route::get('/cart-checkout',[CartController::class,'cart'])->name('cart.checkout');
+
+Route::post('/cart-clear',  [CartController::class,'clear'])->name('cart.clear');
+
+Route::post('/cart-removeitem',  [CartController::class,'removeitem'])->name('cart.removeitem');

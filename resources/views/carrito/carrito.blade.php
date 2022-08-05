@@ -96,13 +96,14 @@
                                                 <i class="fa fa-money  "> Confirmar compra</i>
                                             
                                         </button>
+                                        
                                     </td>
                                 </tr>
                             </tfoot>
                         </table>
                     <!------------------------------>
-                <!--</form> -->
-
+                </form>
+                
                 <style>
                     .border{
                         border: 0;

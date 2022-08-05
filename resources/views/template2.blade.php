@@ -67,7 +67,7 @@
                                 <a href="{{route('principal')}}" class="nav-item nav-link active">Home</a>
                             <a href="{{route('tablap')}}" class="nav-item nav-link">Productos</a>
                             <a href="{{route('tablae')}}" class="nav-item nav-link">Empresas</a>
-                            <a href="{{route('carrito')}}" class="nav-item nav-link">Carrito</a>
+                            <a href="{{route('cart.checkout')}}" class="nav-item nav-link">Carrito</a>
                             <a href="{{route('vista_compras')}}" class="nav-item nav-link">Compras realizadas</a>
                             <a href="{{route('contacto')}}" class="nav-item nav-link">Conocenos</a>
                             <a href="{{route('login')}}" class="nav-item nav-link">Iniciar sesion</a>
@@ -77,7 +77,7 @@
                              <a href="{{route('principal')}}" class="nav-item nav-link active">Home</a>
                             <a href="{{route('tablap')}}" class="nav-item nav-link">Productos</a>
                             <a href="{{route('tablae')}}" class="nav-item nav-link">Empresas</a>
-                            <a href="{{route('carrito')}}" class="nav-item nav-link">Carrito</a>
+                            <a href="{{route('cart.checkout')}}" class="nav-item nav-link">Carrito <span class="badge badge-danger">{{count(Cart::getContent())}}</span></a>
                             <a href="{{route('vista_compras')}}" class="nav-item nav-link">Compras realizadas</a>
                             <a href="{{route('contacto')}}" class="nav-item nav-link">Conocenos</a>
                           
@@ -290,7 +290,7 @@
                                     <img src="img/product-10.jpg" alt="Product Image">
                                 </a>
                                 <div class="product-action">
-                                   
+                                
                                 </div>
                             </div>
                             <div class="product-price">

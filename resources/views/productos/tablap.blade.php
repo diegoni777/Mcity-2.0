@@ -108,7 +108,14 @@
                                     </div>
                                     <div class="product-price">
                                         <h3><span>$</span>{{$info->precio}}</h3>
-                                        <a class="btn" href="{{url('agregar/'.$info->idp)}}"><i class="fa fa-shopping-cart"></i>Comprar</a>
+
+                                        <form action="{{route('cart.add')}}" method="post">
+                                            @csrf
+                                            <input type="hidden" name="producto_id" value="{{$info->idp}}">
+                                            <input type="submit" style="background-color: aqua" name="btn"  class="fa fa-shopping-cart" value="comprar">
+            
+                                        </form>
+                                    
                                     </div>
                                 </div>
                             </div>

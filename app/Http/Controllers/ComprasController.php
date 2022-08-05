@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 class ComprasController extends Controller
 {
     public function guardar_compra(Request $request){
+      //return $request;
 
         $file = $request->file('fotop');
         if($file<>""){
@@ -19,7 +20,7 @@ class ComprasController extends Controller
         else{
           $img2 = "sinfoto.png";
         }
-        $idusuario=session('idusuario');
+        $id_usuario=session('idusuario');
         $compra = new Compras;
         $compra->id = $request->id;
         $compra->fotop = $request->fotop;
@@ -28,7 +29,7 @@ class ComprasController extends Controller
         $compra->cantidad = $request->cantidad;
         $compra->sub_total = $request->sub_total;
         $compra->total = $request->total;
-        $compra->id_usuario = $idusuario;
+        $compra->id_usuario = $id_usuario;
         $compra->save();
         return redirect()->back()->with('success','Compra con exito');
         
