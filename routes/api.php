@@ -3,6 +3,26 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProductosController;
+use App\Http\Controllers\UsuariosController;
+use App\Http\Controllers\TecnologiaController;
+use App\Http\Controllers\EmpresaController;
+use App\Http\Controllers\RopaController;
+use App\Http\Controllers\CuentaController;
+use App\Http\Controllers\CarritoController;
+use App\Http\Controllers\AccesoriosController;
+use App\Http\Controllers\TablapController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ComprasController;
+use App\Http\Controllers\InicioController;
+use App\Http\Controllers\MaquillajeController;
+use App\Http\Controllers\AdminpController;
+use App\Http\Controllers\ContactoController;
+
+use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\CartController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
