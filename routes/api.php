@@ -19,17 +19,17 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 //-------------------------usuarios-------------------------//
-Route::get('alta_usuarios',[UsuariosController::class,'alta_usuarios'])->name('alta_usuarios');
-Route::post('guarda_usuarios',[UsuariosController::class,'guarda_usuarios'])->name('guarda_usuarios');
+Route::get('/alta_usuarios',[UsuariosController::class, 'alta_usuarios']);
+Route::post('/guarda_usuarios',[UsuariosController::class, 'guarda_usuarios']);
 //------------------------borrar------------------------------//
-Route::name('borrar1u')->delete('/borrar1u/{idu}',[AdminController::class,'borrar1u']);
+Route::name('/borrar1u')->delete('/borrar1u/{idu}',[AdminController::class,'borrar1u']);
 
 //------------------------detalle------------------------------//
-Route::name('detalleusu')->get('/detalleusu/{idu}',[AdminController::class, 'detalleusu']);
+Route::get('/detalleusu/{idu}',[AdminController::class, 'detalleusu']);
 
 //-------------------------actualizar------------------------//
-Route::name('editar_usuario')->get('/editar_usuario/{idu}',[AdminController::class, 'editar_usuario']);
-Route::name('salvarusu')->put('/salvarusu/{idu}',[AdminController::class, 'salvarusu']);
+Route::get('/editar_usuario/{idu}',[AdminController::class, 'editar_usuario']);
+Route::put('/salvarusu/{idu}',[AdminController::class, 'salvarusu']);
 
 
 //-----------------------productos---------------------------//
@@ -47,7 +47,8 @@ Route::name('editar_producto')->get('/editar_producto/{idp}',[AdminpController::
 Route::name('salvar')->put('/salvar/{idp}',[AdminpController::class, 'salvar']);
 
 //-------------------------consultas----------------------------//
-Route::get('admin',[AdminController::class,'lista'])->name('admin');
-Route::get('inicioadmin',[AdminController::class,'ver_inicio'])->name('inicioadmin');
-Route::get('adminp',[AdminpController::class,'lista'])->name('adminp');
-Route::name('adminv')->get('adminv',[ComprasController::class,'vista_ventas']);
+Route::get('/admin',[AdminController::class, 'lista']);
+Route::get('/inicioadmin',[AdminController::class, 'ver_inicio']);
+Route::get('/adminp',[AdminpController::class, 'lista']);
+Route::get('/adminv',[ComprasController::class, 'vista_ventas']);
+
