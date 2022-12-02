@@ -13,7 +13,7 @@ use App\Http\Controllers\CuentaController;
 use App\Http\Controllers\CarritoController;
 use App\Http\Controllers\AccesoriosController;
 use App\Http\Controllers\TablapController;
-use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AndroidController;
 use App\Http\Controllers\ComprasController;
 use App\Http\Controllers\InicioController;
 use App\Http\Controllers\MaquillajeController;
@@ -23,52 +23,71 @@ use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\CartController;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
-
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
 //-------------------------usuarios-------------------------//
 Route::get('/alta_usuarios',[UsuariosController::class, 'alta_usuarios']);
-Route::post('/guarda_usuarios',[UsuariosController::class, 'guarda_usuarios']);
+Route::post('/guarda_usuarios',[AndroidController::class, 'guarda_usuarios']);
 //------------------------borrar------------------------------//
-Route::name('/borrar1u')->delete('/borrar1u/{idu}',[AdminController::class,'borrar1u']);
+Route::name('/borrar1u')->delete('/borrar1u/{idu}',[AndroidController::class,'borrar1u']);
 
 //------------------------detalle------------------------------//
-Route::get('/detalleusu/{idu}',[AdminController::class, 'detalleusu']);
+Route::get('/detalleusu/{idu}',[AndroidController::class, 'detalleusu']);
 
 //-------------------------actualizar------------------------//
-Route::get('/editar_usuario/{idu}',[AdminController::class, 'editar_usuario']);
-Route::put('/salvarusu/{idu}',[AdminController::class, 'salvarusu']);
+Route::get('/editar_usuario/{idu}',[AndroidController::class, 'editar_usuario']);
+Route::put('/salvarusu/{idu}',[AndroidController::class, 'salvarusu']);
 
 
 //-----------------------productos---------------------------//
-Route::get('registerP',[ProductosController::class,'alta_productos'])->name('registerP');
-Route::get('alta_productos',[ProductosController::class,'alta_productos'])->name('alta_productos');
-Route::post('guarda_productos',[ProductosController::class,'guarda_productos'])->name('guarda_productos');
+Route::get('registerP',[AndroidController::class,'alta_productos'])->name('registerP');
+Route::get('alta_productos',[AndroidController::class,'alta_productos'])->name('alta_productos');
+Route::post('guarda_productos',[AndroidController::class,'guarda_productos'])->name('guarda_productos');
 //------------------------borrar------------------------------//
-Route::name('borrar1p')->delete('/borrar1p/{idp}',[AdminpController::class,'borrar1p']);
+Route::name('borrar1p')->delete('/borrar1p/{idp}',[AndroidController::class,'borrar1p']);
 
 //------------------------detalle------------------------------//
-Route::name('detalle')->get('/detalle/{idp}',[AdminpController::class, 'detalle']);
+Route::name('detalle')->get('/detalle/{idp}',[AndroidController::class, 'detalle']);
 
 //-------------------------actualizar------------------------//
-Route::name('editar_producto')->get('/editar_producto/{idp}',[AdminpController::class, 'editar_producto']);
-Route::name('salvar')->put('/salvar/{idp}',[AdminpController::class, 'salvar']);
+Route::name('editar_producto')->get('/editar_producto/{idp}',[AndroidController::class, 'editar_producto']);
+Route::name('salvar')->put('/salvar/{idp}',[AndroidController::class, 'salvar']);
 
 //-------------------------consultas----------------------------//
-Route::get('/admin',[AdminController::class, 'lista']);
-Route::get('/inicioadmin',[AdminController::class, 'ver_inicio']);
-Route::get('/adminp',[AdminpController::class, 'lista']);
-Route::get('/adminv',[ComprasController::class, 'vista_ventas']);
+Route::get('/productosLista',[AndroidController::class, 'lista']);
+Route::get('/inicioadmin',[AndroidController::class, 'ver_inicio']);
+Route::get('/usuariosLista',[AdminpController::class, 'listausuarios']);
+Route::get('/adminv',[AndroidController::class, 'vista_ventas']);
+
+
+//---------------------------------Android--------------------------------------//
+//---------------------------------Usuario--------------------------------------//
+
+Route::get('admin',[AndroidController::class,'lista'])->name('admin');
+
+//------------------------borrar------------------------------//
+Route::name('borrar1u')->delete('/borrar1u/{idu}',[AndroidController::class,'borrar1u']);
+
+//------------------------detalle------------------------------//
+Route::name('detalleusu')->get('/detalleusu/{idu}',[AndroidController::class, 'detalleusu']);
+
+//-------------------------actualizar------------------------//
+Route::name('editar_usuario')->get('/editar_usuario/{idu}',[AndroidController::class, 'editar_usuario']);
+Route::name('salvarusu')->put('/salvarusu/{idu}',[AndroidController::class, 'salvarusu']);
+
+
+//----------------------------Producto------------------------------------//
+
+//------------------------borrar------------------------------//
+Route::name('borrar1p')->delete('/borrar1p/{idp}',[AndroidController::class,'borrar1p']);
+
+//------------------------detalle------------------------------//
+Route::name('detalle')->get('/detalle/{idp}',[AndroidController::class, 'detalle']);
+
+//-------------------------actualizar------------------------//
+Route::name('editar_producto')->get('/editar_producto/{idp}',[AndroidController::class, 'editar_producto']);
+Route::name('salvar')->put('/salvar/{idp}',[AndroidController::class, 'salvar']);
+Route::get('valida',[AndroidController::class,'valida'])->name('valida');
 
